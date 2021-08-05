@@ -1,0 +1,19 @@
+#x      #y      #z      #c      #comment     overlayed pointsPrime
+01      03      09      1       #     13     overlayed points
+01      03      09      2       #     23     overlayed points
+01      06      18      2       #     23     overlayed points
+01      06      18      4       #     13     overlayed points
+01      09      27      2       #     23     overlayed points
+01      09      27      4       #     13     overlayed points
+01      12      06      2       #     23     overlayed points
+01      12      06      4       #     13     overlayed points
+01      15      15      2       #     23     overlayed points
+01      15      15      4       #     13     overlayed points
+01      18      24      2       #     23     overlayed points
+01      18      24      4       #     13     overlayed points
+01      21      03      2       #     23     overlayed points
+01      21      03      4       #     13     overlayed points
+01      24      12      2       #     23     overlayed points
+01      24      12      4       #     13     overlayed points
+01      27      21      1       #     13     overlayed points
+01      27      21      2       #     23     overlayed points

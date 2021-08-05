@@ -1,0 +1,40 @@
+# cd "d:"
+# cd "\prime"
+# cd "\gnuplot first1000 13"
+
+
+# splot "13work0.txt" with points pointtype 7 pointsize  1 palette
+
+
+
+
+
+
+
+
+
+
+
+
+#*13     PLUS30    PRIME     MN        COLOR    #WHERE     prime*13
+013      0013      000                 4        #PRIME     013
+013      0043      001                 4        #PRIME     043
+013      0073      002                 4        #PRIME     073
+013      0103      003                 4        #PRIME     103
+013      0133                004       7        #MN
+013      0163      005                 4        #PRIME     163
+013      0193      006                 4        #PRIME     193
+013      0223      007                 4        #PRIME     223
+013      0253                008       7        #MN
+013      0283      009                 4        #PRIME     283
+013      0313      010                 4        #PRIME     313
+013      0343                011       7        #MN
+013      0373      012                 4        #PRIME     373
+013      0403                013       7        #MN
+013      0433      014                 4        #PRIME     433
+013      0463      015                 4        #PRIME     463
+013      0493                016       7        #MN
+013      0523      017                 4        #PRIME     523
+013      0553                018       7        #MN
+013      0583                019       7        #MN
+013      0613      020                 4        #PRIME     613

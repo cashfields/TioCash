@@ -1,0 +1,12 @@
+
+splot
+"snapinpair1317_z2.txt" with points pointtype 7 pointsize  1 lc rgb "red"  ,
+"snapin13_z1.txt" with points pointtype 7 pointsize 1 palette ,
+"snapin17_z1.txt" with points pointtype 7 pointsize 1 palette ,
+"snapin13_z3.txt" with lines lw 3 palette  ,
+"snapin17_z3.txt" with lines lw 3 palette
+
+
+splot "snapinpair1317_z2.txt" with points pointtype 7 pointsize  1 lc rgb "darkcyan"  , "snapin13_z1.txt" with points pointtype 7 pointsize 1 palette , "snapin17_z1.txt" with points pointtype 7 pointsize 1 palette , "snapin13_z3.txt" with lines lw 3 palette  , "snapin17_z3.txt" with lines lw 3 palette
+
+
