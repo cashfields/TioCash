@@ -1,4 +1,4 @@
-#41_gnuplot_30_30_30_GIF.md
+<h1>**41_gnuplot_30_30_30_GIF.md**
 
 This dir contains .gif files that show the output from **gnuplot**.
 
