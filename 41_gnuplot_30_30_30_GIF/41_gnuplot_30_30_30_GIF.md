@@ -1,1 +1,1 @@
-This dir contains .gif file that show output from gnuplot.
+This dir contains .gif file that show output from **gnuplot**.
