@@ -12,3 +12,4 @@ This is a list of dynamic screens:
 
 [**3**](https://rawcdn.githack.com/cashfields/TioCash/blob/main/60_r_plots/sel_0000_color_prime_30.html)
 
+[**4**](https://bb.githack.com/cashfields/TioCash/raw/main/60_r_plots/sel_0000_color_prime_30.html)
