@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+---
+layout: default
+---
 
-You can use the [editor on GitHub](https://github.com/cashfields/TioCash/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+<div class="blurb">
+<!-- ##################### -->	
+	
+	<body>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+	       <h3>Hi there, I'm Scott CA$H Fields!</h3>
+        <br>I'm looking for <em>Prime Numbers</em> , trust me.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+       <h5> /60_r_plots/ - section of dynamic plots </h5>
 
-- Bulleted
-- List
+             <a href="https://cashfields.github.io/TioCash/60_r_plots/index.md">Read me - index.md</a>
+  <br>
+             <a href="https://cashfields.github.io/TioCash/60_r_plots/sel_All_color_pairs.html">Select all color pairs</a>
+  <br>  
+             <a href="https://cashfields.github.io/TioCash/60_r_plots/sel_0000_color_prime_30.html">Select 0000 color prime 30</a>
+  <br>  
+            <a href="https://cashfields.github.io/TioCash/60_r_plots/sel_0129l_color_prime_30.html">Select 0129</a>
+  <br>  
+            <a href="https://cashfields.github.io/TioCash/60_r_plots/sel_0723l_color_prime_30.html">Select 0723</a>
+  <br>  
+            <a href="https://cashfields.github.io/TioCash/60_r_plots/sel_1119l_color_prime_30.html">Select 1119</a>
+  <br>  
+            <a href="https://cashfields.github.io/TioCash/60_r_plots/sel_1317l_color_prime_30.html">Select 1317</a>
 
-1. Numbered
-2. List
+ <p> Above Here
+ <p> Lets start at the gnuplots and move forward.
+              There are several picture files of the output.
+              More
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+  </body>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cashfields/TioCash/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+	
+<!-- ##################### -->	
+</div><!-- /.blurb -->
