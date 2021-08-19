@@ -9,7 +9,7 @@ way to group the data.
 get to color coding of the *wildcard and *fam (family) numbers and formulas.
 
         *wildcard are: *1 , *3 , *7 , *9 numbers. The least siginaficant digit 
-        of a number makes the wildcard value. 
+        of any number makes the wildcard value. 
         
         Call it like this: 
         wildcard1 , wildcard3 , wildcard7 , wildcard9
@@ -23,7 +23,19 @@ get to color coding of the *wildcard and *fam (family) numbers and formulas.
       *fam1 , *fam7 , *fam11 , *fam13 , *fam17 , *fam19 , *fam23 , and *fam29.
       
       
-      *fam make pairs
+      *fam pairs
       1) Brothers - seperated by 10
+            + *fam01 and *fam11 - parent *1     (|01 - 11| = 10)
+            + *fam07 and *fam17 - parent *7     (|07 - 17| = 10)
+            + *fam13 and *fam23 - parent *3     (|13 - 23| = 10)
+            + *fam19 and *fam29 - parent *9     (|19 - 29| = 10)
             
+      2) Cousins (compliments that add to 30) 
+            + *fam01 and *fam29 - (parent *1 and parent *9) (01 + 29 = 30)
+            + *fam07 and *fam23 - (parent *7 and parent *3) (07 + 23 = 30)
+            + *fam11 and *fam19 - (parent *1 and parent *9) (11 + 19 = 30)
+            + *fam13 and *fam17 - (parent *3 and parent *7) (13 + 17 = 30) 
+
+
+
 
