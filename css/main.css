@@ -20,7 +20,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-*/
+
 p {
     font-size: 1.5em;
     line-height: 1em;
@@ -39,7 +39,8 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-   
+
+*/   
 h5 {
   background-color: cyan;
   margin-bottom: 0;
