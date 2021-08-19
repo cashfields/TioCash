@@ -1,3 +1,5 @@
 name: Scott CA$H Fields
 remote_theme: jekyll-theme-modernist
 markdown: kramdown  
+
+theme: jekyll-theme-modernist
