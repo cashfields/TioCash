@@ -8,7 +8,7 @@ way to group the data.
     The second file: "prime stuff2 by 5 find mod 0c.xls" shows the method to
 get to color coding of the *wildcard and *fam (family) numbers and formulas.
 
-        __\*wildcard__ are: *1 , *3 , *7 , *9 numbers. The least siginaficant digit 
+        **__\*wildcard__** are: *1 , *3 , *7 , *9 numbers. The least siginaficant digit 
         of any number makes the wildcard value. 
         
         Pronounce it like this: 
@@ -16,7 +16,7 @@ get to color coding of the *wildcard and *fam (family) numbers and formulas.
         or
         starwildcard1 , starwildcard3 , starwildcard7 , starwildcard9
 
-       The __\*fam (*family)__ numbers are subsets of *wildcard numbers.
+       The **__\*fam (*family)__** numbers are subsets of *wildcard numbers.
 
       *fam (*family) 
       *fam are subgroups of *wildcard numbers: 
