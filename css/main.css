@@ -42,11 +42,12 @@ ul.posts li {
 h5 {
   background-color: cyan;
   padding: -2em;
+    margin-bottom: -6px;
 }
 
 h1 {
     padding: 0;
-    font-size: 3em;
+    <!--font-size: 3em; -->
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
