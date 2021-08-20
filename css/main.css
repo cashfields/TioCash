@@ -44,6 +44,7 @@ ul.posts li {
 h5 {
   background-color: cyan;
   margin-bottom: 0;
+  padding:0;
 }
 
 h1 {
