@@ -45,6 +45,7 @@ h5 {
   background-color: cyan;
   margin-bottom: 0;
   padding:0;
+  display: inline-block;
 }
 
 h1 {
