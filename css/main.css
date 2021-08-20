@@ -1,6 +1,7 @@
 body {
     margin: 1;
     <!--width: 70%;-->
+     background: gainsboro;
 }
 /*
 nav ul, footer ul {
@@ -41,9 +42,7 @@ ul.posts li {
 }
 
 */   
-body {
-           background: gainsboro;
-}
+
 h5 {
   background-color: cyan;
   margin-bottom: 0;
