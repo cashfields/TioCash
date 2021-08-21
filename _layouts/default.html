@@ -15,22 +15,10 @@ background: gainsboro;
 </style>
 -->
 
-<body onload="loadFunction()">
-        
-<script>
-function loadFunction() {
-
-
-alert("Page is loaded");
- document.getElementById('username').innerHTML = document.title;
-	var element = document.title;
+<body>
 	
-alert(element);
-}
-</script>	
-	
-	
-	
+	title = $('title').html();
+$('<h1>'+title+'</h1>').appendTo('body');
 	
 	
 	
