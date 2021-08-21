@@ -17,8 +17,14 @@ background: gainsboro;
 <script>
     document.getElementById('pagetitle').innerHTML = document.title;
 </script>
-                <body>
+                <body onload="loadFunction()">
         
+<script>
+function loadFunction() {
+alert("Page is loaded");
+}
+    </script>			
+			
     <script>
              document.getElementById('pagename').innerHTML = document.title;
     </script>
