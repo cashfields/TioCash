@@ -19,7 +19,8 @@ background: gainsboro;
 	
 	
 	<script>
-		document.body.setAttribute('title', document.title);
+		
+		let attribute = document.body.getAttribute(document.title);
 	</script>
 	
 	title = $('title').html();
@@ -34,7 +35,7 @@ $('<h1>'+title+'</h1>').appendTo('body');
                       <a href="mailto:cashfieldsutc@gmail.com">email</a></li>
                       &nbsp;&nbsp;&nbsp;&nbsp;
                       <a href="https://github.com/cashfields/tiocash">TioCash Project</a></li>
-                      <span id="username"></span>
+                      <span id="attribute"></span>
                         
                         <div class="container">
 
