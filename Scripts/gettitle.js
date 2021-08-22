@@ -1,4 +1,3 @@
- <script>
 
 function myFunction() 
 {
@@ -16,4 +15,3 @@ alert(x);
 document.getElementById("myx").innerHTML = x
 console.log(x); 
 }
- </script>
