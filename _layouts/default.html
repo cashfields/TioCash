@@ -41,6 +41,16 @@ background: gainsboro;
 	   			
         function MyFunction2() 
 	{ 
+		
+var theHead = document.head;
+console.log(theHead.id); // "my-document-head";
+console.log( theHead === document.querySelector("head") ); // true
+//alert(theHead.id);
+//alert("skip")
+var wantedname = (theHead.id);
+alert(wantedname);
+document.getElementById("mywantedname").innerHTML = wantedname;
+	
         alert("Page is loaded");
 	alert("Skip");
 	alert("Alert2: "<span id="mywantedname"></span>);
