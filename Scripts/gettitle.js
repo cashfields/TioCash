@@ -1,7 +1,7 @@
 
 function myFunction() 
 {
-  Alert("Here Top");
+  alert("Here Top");
 var theHead = document.head;
 console.log(theHead.id); // "my-document-head";
 console.log( theHead === document.querySelector("head") ); // true
@@ -15,5 +15,5 @@ var x = document.title;
 alert(x);
 document.getElementById("myx").innerHTML = x
 console.log(x); 
-  Alert("Here Bot");
+  alert("Here Bot");
 }
