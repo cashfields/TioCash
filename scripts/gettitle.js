@@ -13,9 +13,9 @@ alert(x.textContent)
 
 // or
 xx = document.querySelector("title")
-alert(document.querySelector("title"))
+alert(document.querySelector("title").lastChild)
   
-  alert(xx.innerHTML)
+  alert(xx.lastChild)
   alert("Here mid")
   
   
