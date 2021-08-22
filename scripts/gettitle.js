@@ -12,9 +12,10 @@ alert(x.innerHTML)
 alert(x.textContent)
 
 // or
-document.querySelector("title")
+xx = document.querySelector("title")
 alert(document.querySelector("title"))
   
+  alert(xx.innerHTML)
   alert("Here mid")
   
   
@@ -30,9 +31,9 @@ alert(x.textContent)
 
 // or
 
-document.querySelector("title")
+zz = document.querySelector("title")
   alert(document.querySelector("title"))
-  
+  alert(zz.txt)
   alert("Here mid2")
   
   
