@@ -12,8 +12,8 @@ alert(x.innerHTML)
 alert(x.textContent)
 
 // or
-xx = document.querySelector("title")
-alert(document.querySelector("title").lastChild)
+xx = document.getElementsByTagName("title")
+alert(document.getElementsByTagName("title").lastChild)
   
   alert(xx.lastChild)
   alert("Here mid")
@@ -21,7 +21,7 @@ alert(document.querySelector("title").lastChild)
   
   
   
-  var x = document.querySelector("title");
+  var x = document.getElementsByTagName("title");
 
 alert(x.innerHTML)
 
@@ -31,9 +31,9 @@ alert(x.textContent)
 
 // or
 
-zz = document.querySelector("title")
-  alert(document.querySelector("title"))
-  alert(zz.txt)
+zz = document.getElementsByTagName("title")
+  alert(document.getElementsByTagName("title"))
+  alert(zz.innerText)
   alert("Here mid2")
   
   
