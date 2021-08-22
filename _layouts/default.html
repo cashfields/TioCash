@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-        <html>
+        <head>
                 <head id="big my-document-head">
                         <title>{{ page.title }}</title>
                         <!-- link to main stylesheet -->
@@ -32,29 +32,20 @@ background: gainsboro;
 </style>
 -->
 
-<body onload="MyFunction2()">  
+<body onload="MyFunction()">  
 <!--     <body>                -->
 		<script>
 	    
  
 	    <!-- https://www.w3docs.com/snippets/javascript/how-to-make-javascript-execute-after-page-load.html -->
 	   			
-        function MyFunction2() 
-	{ 
-		
-var theHead = document.head;
-console.log(theHead.id); // "my-document-head";
-console.log( theHead === document.querySelector("head") ); // true
-//alert(theHead.id);
-//alert("skip")
-var wantedname = (theHead.id);
-alert(wantedname);
-document.getElementById("mywantedname").innerHTML = wantedname;
-	
-        alert("Page is loaded");
-	alert("Skip");
-	alert("Alert2: "<span id="mywantedname"></span>);
-       }   
+//        function MyFunction() 
+//	{ 
+//		
+//        alert("Page is loaded");
+//	alert("Skip");
+//	alert("Alert2: "<span id="mywantedname"></span>);
+ //      }   
 		
 	 
     </script>
