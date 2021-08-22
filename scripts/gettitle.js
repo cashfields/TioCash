@@ -2,6 +2,24 @@ function myFunction()
 {
   alert("Here Top");
   
+  
+  var x = document.getElementsByTagName("title")[0];
+
+alert(x.innerHTML)
+
+// or
+
+alert(x.textContent)
+
+// or
+
+document.querySelector('title')
+  
+  alert("Here mid")
+  
+  
+  
+  
   console.log(document.title)
   alert(document.title)
  
