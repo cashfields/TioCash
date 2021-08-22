@@ -20,6 +20,23 @@ document.querySelector('title')
   
   
   
+  var x = document.querySelector("title");
+
+alert(x.innerHTML)
+
+// or
+
+alert(x.textContent)
+
+// or
+
+document.querySelector('title')
+  
+  alert("Here mid2")
+  
+  
+  
+  
   console.log(document.title)
   alert(document.title)
  
