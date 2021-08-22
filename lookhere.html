@@ -5,11 +5,27 @@ layout: default
 <div class="blurb">
 <!-- ##################### -->
 
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>HTML DOM Objects</title>
+</head><!--  ww w  .j a v a  2  s .com-->
+<body>
+ -->
+<button onclick="myFunction()">test</button>
+<p id="demo"></p>
 
-<h3>Hi there, </h3>
-<br>I'm looking for <em>theme</em> , needed.
+<script>
+function myFunction() {
+    var x = document.getElementsByTagName("TITLE")[0].text;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
 
-
-
+  
+ <!-- 
+</body>
+</html>
+-->
 <!-- ##################### -->
 </div><!-- /.blurb -->
