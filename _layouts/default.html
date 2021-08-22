@@ -4,8 +4,25 @@
                         <title>{{ page.title }}</title>
                         <!-- link to main stylesheet -->
                        <link rel="stylesheet" type="text/css" href="https://cashfields.github.io/TioCash/css/main.css"> 
- 
-	
+<script>
+//https://stackoverflow.com/questions/40858456/how-to-display-a-javascript-var-in-html-body	//
+//https://stackoverflow.com/questions/40858456/how-to-display-a-javascript-var-in-html-body//
+function myFunction() 
+{
+var theHead = document.head;
+console.log(theHead.id); // "my-document-head";
+console.log( theHead === document.querySelector("head") ); // true
+//alert(theHead.id);
+//alert("skip")
+var wantedname = (theHead.id);
+alert(wantedname);
+document.getElementById("mywantedname").innerHTML = wantedname;
+}
+ </script>
+
+			
+			
+			
                 </head>
 <!--
 <style>
@@ -35,7 +52,8 @@ alert( content );
                       <a href="mailto:cashfieldsutc@gmail.com">email</a></li>
                       &nbsp;&nbsp;&nbsp;&nbsp;
                       <a href="https://github.com/cashfields/tiocash">TioCash Project</a></li>
-                    
+		      &nbsp;&nbsp;&nbsp;&nbsp;		
+                      <span id="mywantedname"></span>
                         
                         <div class="container">
 
