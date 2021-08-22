@@ -32,9 +32,9 @@ alert(x.textContent)
 // or
 
 zz = document.getElementsByTagName("title")
-  alert(document.getElementsByTagName("title"))
-  alert(zz.innerText)
-  alert("Here mid2")
+  alert(document.getElementsByTagName("title").innerHTML)
+  //alert(zz.innerText)
+ alert("Here mid2")
   
   
   
