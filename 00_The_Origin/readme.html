@@ -87,7 +87,78 @@ br>	So , *fam01 and *fam29 are cousins
 	The search shifted back and forth between primes and non-primes. If there was no easy simple method 
 	to create a formula for primes , maybe elminating all non-primes would shake out the primes.
 	Back and forth. I have a tree sort the numbers thru.
-
+<br>
+<p>############ fall thru table
+<br>
+<br>
+<br>    0 1 2 3 4 5 6 7 8 9 - base numbers
+<br>
+<br>        1             3             7             9       - 1st sort - elminate 2,3,5 & even
+<br>     1 * 2 * 3 * 5 = 30                                   - the key to seperating numbers
+<br>
+<br>    01  11  21    03 13  23    07  17  27     09 19  29   - create *fam 2nd sort
+<br>
+<br>    01  11           13  23    07  17            19  29   - sort off 1/3 (divisibale 3)
+<br>
+<br>    --  --           --  --    --  --            --  --                      Cash Pile
+<br>    01  11           13  23    07  17            19  29   - prime the pump - level 0
+<br>    31  41           33  53    37  47            49  59   - + 30           - level 1
+<br>    61  71           63  83    67  77            79  89   - + 30           - level 2
+<br>    91 101           93 103    97 107           109 119   - + 30           - level 3
+<br>   121 131          123 133   127 137           139 149   - + 30           - level 4
+<br>   151 161          153 163   157 167           169 179   - + 30           - level 5
+<br>
+<br><p>
+<br>    Lets re-adjust the table and the headings
+<br>  ----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+<br>   *fam01    *fam11   *fam13    *fam23    *fam07    *fam17   *fam19     *fam29
+<br>    --        --        --        --        --        --        --        --        Cash Pile
+<br>    01        11        13        23        07        17        19        29      - level 0
+<br>    31        41        33        53        37        47        49        59      - level 1
+<br>    61        71        63        83        67        77        79        89      - level 2
+<br>    91       101        93       103        97       107       109       119      - level 3
+<br>   121       131       123       133       127       137       139       149      - level 4
+<br>   151       161       153       163       157       167       169       179      - level 5
+<br>
+<br>
+<br>
+<br>   Using the formula (PS-*fam)/30 we get the level. This is the PSL (Prime Suspect Level)
+<br>
+<br>
+<br><p>
+<br>    Lets re-adjust the columns to go from lo to hi
+<br>    Mark the non-prime (*)
+<br>  ----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+<br>   *fam01    *fam07    *fam11   *fam13    *fam17    *fam19    *fam23    *fam29
+<br>    --         --       --        --        --         --       --        --
+<br>    01         07       11        13        17         19       23        29
+<br>    31         37       41        43        47         49*      53        59
+<br>    61         67       71        73        77*        79       83        89
+<br>    91*        97      101       103       107        109      103       119*
+<br>   121*       127      131       133*      137        139      133*      149
+<br>   151        157      161*      163       167        169*     163       179
+<br>
+<br>
+<br>   Factors:
+<br>     49 = 7x7
+<br>     77 = 7x11
+<br>     91 = 7x13
+<br>    119 = 7x17
+<br>    121 = 11x11
+<br>    131 = 7x19
+<br>    133 = 7x19
+<br>    161 = 7x23
+<br>    169 = 13x13
+<br>
+<br>   These factors will later make the last caculation as a fall thru table.
+<br>   These are unique sub-keys at the *fam grouping and will no apply to any other *fam.
+<br>   Any number that don 't genegate a match to the factors and the level (PSL) will be prime.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 	
