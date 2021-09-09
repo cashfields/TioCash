@@ -2,9 +2,11 @@ body {
     margin: 1;
     background: gainsboro;
 }
+
 h5 {
   background-color: cyan;
-  margin-bottom: 0;
+  margin-top: -6px;
+ margin-bottom: -6px;
   padding:0;
   display: inline-block;
 }
