@@ -4,17 +4,11 @@ body {
 }
 h5 {
   background-color: cyan;
-  margin-bottom: -5;
-  padding:-5;
-  display: inline-block;
-}
-
-h6 {
-  background-color: cyan;
-  margin-bottom: -5;
+  margin-bottom: 0;
   padding:0;
   display: inline-block;
 }
+
 
 h1 {
      margin-bottom: 0;
@@ -67,6 +61,14 @@ footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
+hr {  background-color: #eee;
+    border: 0 none;
+    color: #eee;
+    height: -5px;
+}
+
+
+
 
 ul.posts {
     margin: 20px auto 40px;
