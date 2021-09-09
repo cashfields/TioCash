@@ -9,13 +9,14 @@ layout: default
 <!-- ##################### -->	
 <!-- -->           	
 
-	     <h3>Hi there, I'm Scott CA$H Fields!</h3>
+	       <h3>Hi there, I'm Scott CA$H Fields!</h3>
         <br>I believe I have found a formula for <em>Prime Numbers</em>.
 
+<br>
 <h5> /00_The_Origin/ - orginal XLS</h5> - <a href="https://cashfields.github.io/TioCash/00_The_Origin/readme.html">readme.html</a>
-<hr style="height:1px>            
+<hr>            
 <h5> /10_PDF/ - orginal PDF</h5> - <a href="https://cashfields.github.io/TioCash/10_PDF/readme.html">readme.html</a>
-<hr style="height:1px>  
+<hr>
 <h5> /20_EXCEL/ - additional EXCEL</h5> - <a href="https://cashfields.github.io/TioCash/20_EXCEL/readme.html">readme.html</a>
 <hr>            
 <h5> /30_gnuplot/ - orginal gnuplots</h5> - <a href="https://cashfields.github.io/TioCash/30_gnuplot/readme.html">readme.html</a>
