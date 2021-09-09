@@ -63,8 +63,7 @@ footer {
 }
 hr {  background-color: #eee;
     border: 0 none;
-    color: #eee;
-    height: -5px;
+    height: 0em;
 }
 
 
