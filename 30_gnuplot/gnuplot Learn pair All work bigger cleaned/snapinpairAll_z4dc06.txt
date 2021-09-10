@@ -1,0 +1,48 @@
+##########  lines to join *pairs
+# make the shortest line the lowest color
+#### 1 29
+#x  #y  #z  #c
+1   17  17  6
+1   13  13  6
+#x  #y  #z  #c
+29  17  13  6
+29  13  17  6
+#x  #y  #z  #c
+1   17  17  6
+
+
+
+#### 7 23
+#x  #y  #z  #c
+7   13   1  6   #should be 6 was 18
+7   17  29  6   #should be 6 was 18
+#x  #y  #z  #c
+23  17   1  6   #should be 6 was 18
+23  13  29  6   #should be 6 was 18
+#x  #y  #z  #c
+7   13   1  6   #should be 6 was 18
+
+
+
+#### 11 19
+#x  #y  #z  #c
+11  13  23  6
+11  17   7  6
+#x  #y  #z  #c
+19  13   7  6
+19  17  23  6
+#x  #y  #z  #c
+11  13  23  6
+
+
+
+#### 13 17
+#x  #y  #z  #c
+13  13  19  6
+13  17  11  6
+#x  #y  #z  #c
+17  13  11  6
+17  17  19  6
+#x  #y  #z  #c
+13  13  19  6
+

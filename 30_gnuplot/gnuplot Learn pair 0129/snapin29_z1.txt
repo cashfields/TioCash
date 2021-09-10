@@ -1,0 +1,28 @@
+## command to plot
+## splot "snapin29_z2.txt" with points pointtype 7 pointsize  1 lc rgb "cyan"  , "snapin29_
+## z1.txt" with points pointtype 7 pointsize 1 palette ,"snapin29_z3.txt" with lines lw 3 palette
+##   all not prime = color 1
+##
+#z      #x      #y     #c
+29      2       28     1
+29      3       27     1
+29      4       26     1
+29      5       25     1
+29      6       24     1
+29      8       22     1
+29      9       21     1
+29      10      20     1
+29      12      18     1
+29      14      16     1
+29      15      15     1
+29      16      14     1
+29      18      12     1
+29      19      11     1
+29      20      10     1
+29      21      9      1
+29      22      8      1
+29      24      6      1
+29      25      5      1
+29      26      4      1
+29      27      3      1
+29      29      1      1

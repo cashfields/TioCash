@@ -1,0 +1,8 @@
+splot "try_z2.txt" with points pointtype 7 pointsize 1 lc rgb "cyan" , "try_z1.txt" with points pointtype 7 pointsize 1 palette , "tryA.txt" with lines lw 3 palette  , "tryB.txt"  with lines lw 3 palette
+
+"snapinpairAll_z4dc06.txt
+" with lines lw 3 palette
+
+
+
+splot "try_z2.txt" with points pointtype 5 pointsize 1 lc rgb "blue" , "try_z1.txt" with points pointtype 9 pointsize 1 palette , "tryA.txt" with lines lw 3 palette  , "tryB.txt"  with lines lw 3 palette

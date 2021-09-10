@@ -1,0 +1,16 @@
+## command to plot
+##  splot "snapin17_a.txt" with points pointtype 7 pointsize 1 palette , "snapin17_b.txt" with
+##  lines palette , "snapin17_c.txt" with lines palette , "snapin17_d.txt" with lines palette
+##
+##    all possible prime = 8
+##
+##
+ #z      #x      #y     #c
+ 17      1       17     8
+ 17      7       29     8
+ 17      11      7      8
+ 17      13      11     8
+ 17      17      19     8
+ 17      19      23     8
+ 17      23      1      8
+ 17      29      13     8

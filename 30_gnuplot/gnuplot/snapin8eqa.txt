@@ -1,0 +1,8 @@
+#splot "snapin11.txt" with points pointtype 1 pointsize 1 palette , "snapin8.txt" with lines
+
+11   1   1  5
+11  41  41  5
+11  60  60  5
+
+
+

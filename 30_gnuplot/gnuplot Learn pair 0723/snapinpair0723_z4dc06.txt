@@ -1,0 +1,9 @@
+##########  lines to join *pairs
+# make the shortest line the lowest color
+#x  #y  #z  #c
+7   11  17   6
+7   19  13   6
+
+#x  #y  #z  #c
+23  11  13   6
+23  19  17   6

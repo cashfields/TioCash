@@ -1,0 +1,52 @@
+# 12
+#15 17 01 rgb "white"
+#01 29 20 rgb "white"
+
+17  01  13  rgb "white"
+1   31  31  rgb "white"
+
+
+#17  29  13  rbg "white"
+
+#1   31  31  rbg "white"
+
+
+#17  29  13  rbg "white"
+
+
+
+#17  31  47  rbg "white"
+#17  59  43  rgb "white"
+
+#1   61  61  rgb "white"
+#1   89  89  rbg "white"
+
+
+
+# # 18
+# 17  23  01  rbg "white"
+# 1   37  37  rbg "white"
+#
+# 17  53  31  rbg "white"
+# 1   67  67  rbg "white"
+#
+# # 24
+# 17  19  23  rbg "white"
+# 1   41  41  rbg "white"
+#
+# 17  49  53  rbg "white"
+# 1   71  71  rbg "white"
+#
+# # 06
+# 17  17  19  rbg "white"
+# 1   43  43  rbg "white"
+#
+# 17  47  49  rbg "white"
+# 1   73  73  rbg "white"
+
+
+#splot "snapinpairAll_z2.txt" with points pointtype 7 pointsize 1 lc rgb "cyan" , "snapinpa
+#irAll_z1.txt" with points pointtype 7 pointsize 1 palette , "snapinpairAll_z4ac12.txt" with lines l
+#w 3 palette , "snapinpairAll_z4bc18.txt" with lines lw 3 palette , "snapinpairAll_z4cc24.txt" with
+#lines lw 3 palette , "snapinpairAll_z4dc06.txt" with lines lw 3 palette , "snapinWhite.txt" with li
+#nes 3 palette

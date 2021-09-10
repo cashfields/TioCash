@@ -1,0 +1,28 @@
+#splot "snapin11.txt" with points pointtype 1 pointsize 1 palette , "snapin8.txt" with lines
+##########  lines to join *pairs
+#x  #y  #z  #c
+17  1   17  1
+17  29  13  1
+
+
+#x  #y  #z  #c
+17  7   29  3
+17  23  01  3
+
+
+#x  #y  #z  #c
+17  11   7  5
+17  19  23  5
+
+
+#x  #y  #z  #c
+17  13  11  8
+17  17  19  8
+
+
+# fix color scale to 10 - plot a point    = max = 10
+
+00  00  00  10
+
+
+30  30  30  10

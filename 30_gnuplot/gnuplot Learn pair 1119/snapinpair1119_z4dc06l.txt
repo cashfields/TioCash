@@ -1,0 +1,9 @@
+# make the shortest line the lowest color
+#x  #y  #z  #c
+11  13  23  6
+11  17   7  6
+
+
+#x  #y  #z  #c
+19  13   7  6
+19  17  23  6

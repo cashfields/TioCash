@@ -1,0 +1,44 @@
+#splot "snapin11.txt" with points pointtype 1 pointsize 1 palette , "snapin8.txt" with lines
+##########  lines to join *pairs
+# make the shortest line the lowest color
+#x  #y  #z  #c
+13  1   13  12
+13  29  17  12
+
+
+#x  #y  #z  #c
+13  7   01  18
+13  23  29  18
+
+
+#x  #y  #z  #c
+13  11  23  24
+13  19   7  24
+
+
+#x  #y  #z  #c
+13  13  19  6
+13  17  11  6
+
+
+#splot "snapin11.txt" with points pointtype 1 pointsize 1 palette , "snapin8.txt" with lines
+##########  lines to join *pairs
+# make the shortest line the lowest color
+#x  #y  #z  #c
+17  1   17  12
+17  29  13  12
+
+
+#x  #y  #z  #c
+17  7   29  18
+17  23  01  18
+
+
+#x  #y  #z  #c
+17  11   7  24
+17  19  23  24
+
+
+#x  #y  #z  #c
+17  13  11  6
+17  17  19  6

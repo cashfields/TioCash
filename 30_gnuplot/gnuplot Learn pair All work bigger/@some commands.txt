@@ -1,0 +1,18 @@
+
+set xrange [30:30]
+set yrange [30:30]
+set zrange [30:30]
+
+gnuplot> set dgrid3d 30,30
+gnuplot> set hidden3d
+gnuplot> splot "datafile.dat" u 1:2:3 with lines
+
+gnuplot> set contour
+gnuplot> set cntrparam levels 10
+
+
+set key off
+
+set xyplane relative <value>
+
+set hidden3d ??

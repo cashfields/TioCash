@@ -1,0 +1,21 @@
+#x      #y      #z      #c      #comment Prime
+# with points pointtype 1 pointsize 1 lc rgb "red"
+#x      #y      #z      #c      #comment Prime
+1       03      03      1       # 1    overlayed points
+1       03      03      3       # 11   overlayed points
+1       06      06      1       # 1    overlayed points
+1       06      06      3       # 11   overlayed points
+1       09      09      1       # 1    overlayed points
+1       09      09      3       # 11   overlayed points
+1       12      12      1       # 1    overlayed points
+1       12      12      3       # 11   overlayed points
+1       15      15      1       # 1    overlayed points
+1       15      15      3       # 11   overlayed points
+1       18      18      1       # 1    overlayed points
+1       18      18      3       # 11   overlayed points
+1       21      21      1       # 1    overlayed points
+1       21      21      3       # 11   overlayed points
+1       24      24      1       # 1    overlayed points
+1       24      24      3       # 11   overlayed points
+1       27      27      1       # 1    overlayed points
+1       27      27      3       # 11   overlayed points

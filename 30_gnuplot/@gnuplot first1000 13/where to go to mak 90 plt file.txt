@@ -1,0 +1,11 @@
+## Last datafile plotted: "cube_30_30_30.txt"
+splot
+"cube_30_30_30_rgb0129.txt" with points pointtype 7 pointsize  1 palette ,
+"cube_30_30_30_rgb0723.txt" with points pointtype 7 pointsize  1 palette ,
+"cube_30_30_30_rgb1119.txt" with points pointtype 7 pointsize  1 palette ,
+"cube_30_30_30_rgb1317.txt" with points pointtype 7 pointsize  1 palette ,
+
+"cube_30_30_30_rgb0030.txt" with points pointtype 1 pointsize  1 lc rgb "red" ,
+
+"cube_30_30_30_rgb_1_3_7_9_Red.txt" with points pointtype 7 pointsize  1 lc rgb "red"
+#    EOF

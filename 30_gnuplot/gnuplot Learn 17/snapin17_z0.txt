@@ -1,0 +1,12 @@
+## command to plot
+##  splot "snapin17_a.txt" with points pointtype 7 pointsize 1 palette , "snapin17_b.txt" with
+##  lines palette , "snapin17_c.txt" with lines palette , "snapin17_d.txt" with lines palette
+##
+
+# splot "snapin17_z0.txt" with points pointtype 7 pointsize 0 palette ,"snapin17_z1.txt" with points pointtype 7 pointsize 1 palette , "snapin17_z2.txt" with points pointtype 7 pointsize 1 palette
+
+# set color from 0 to 10 - dummy points
+ 00      00      00     10
+ 30      30      30     10
+
+
