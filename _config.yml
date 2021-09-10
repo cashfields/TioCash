@@ -3,3 +3,4 @@ name: Scott CA$H Fields
 #theme: jekyll-theme-modernist
 #remote_theme: jekyll-theme-modernist
 root: /
+relative_permalinks: false
