@@ -6,23 +6,6 @@ layout: default
 <!-- ##################### -->	
 <!-- -->     
 
-<style>
- /* add in line dt dd table */
-/* https://codepen.io/agasthyanavaneeth/pen/nvgCz   */
-dl.inline dd {
-  display: inline;
-  margin: 0;
-  lext
-}
-dl.inline dd:after{
-display: block;
-content: '';
-}
-dl.inline dt{
-  display: inline-block;
-min-width: 100px;
-}
- </style>
 
  <input id="calc"  />
  <button onclick="calculate()">calculate</button>
@@ -209,16 +192,16 @@ document.write("<br><br>"+ "Non-Prime Suspect Level is " + fam09 );
 
 document.write("<hr>"); 
 
-document.write('<dl class="inline">')  
-document.write("<dt>sub07*fam01</dt> <dd> 7  </dd>")
-document.write("<dt>sub07*fam07</dt> <dd> 1  </dd>")
-document.write("<dt>sub07*fam11</dt> <dd> 17 </dd>")
-document.write("<dt>sub07*fam13</dt> <dd> 19 </dd>")
-document.write("<dt>sub07*fam17</dt> <dd> 11 </dd>")
-document.write("<dt>sub07*fam19</dt> <dd> 13 </dd>")
-document.write("<dt>sub07*fam23</dt> <dd> 29 </dd>")
-document.write("<dt>sub07*fam29</dt> <dd> 23 </dd>")
-document.write("</dl>")
+document.write('<ul>')  
+document.write("<li>sub07*fam01 =  7  </li>")
+document.write("<li>sub07*fam07 =  1  </li>")
+document.write("<li>sub07*fam11 = 17 </li>")
+document.write("<li>sub07*fam13 = 19 </li>")
+document.write("<li>sub07*fam17 = 11 </li>")
+document.write("<li>sub07*fam19 = 13 </li>")
+document.write("<li>sub07*fam23 = 29 </li>")
+document.write("<li>sub07*fam29 = 23 </li>")
+document.write("</il>")
 
 
 }
