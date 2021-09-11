@@ -1,0 +1,411 @@
+---
+title: my home page title
+layout: default
+---
+<div class="blurb">
+<!-- ##################### -->	
+<!-- -->     
+
+<br>
+ <input id="calc"  />
+ <button onclick="calculate()">calculate</button>
+ <div id="result"></div>
+ 
+
+ 
+ <script>
+function calculate(){
+    document.getElementById('result')
+  .innerText=eval(document.getElementById('calc').value);
+  
+
+  
+  var PS = eval(document.getElementById('calc').value)
+document.write("<br>"); 
+document.write("Prime Suspect (PS) is: ");  
+document.write(PS);  
+document.write("<br>"); 
+/* a number test */
+/*
+var pstext = PS - 7;
+document.write(pstext ); 
+document.write("<br> here" ); 
+*/
+var toText = PS.toString(); //convert to string
+var lastChar = toText.slice(-1); //gets last character
+var lastDigit = +(lastChar); //convert last character to number
+/*
+console.log(lastDigit); //5
+document.write("<br> here convert : "); 
+*/
+document.write("<br>"); 
+document.write("*wildcard is: ");  
+document.write(lastDigit);  
+document.write("<br>"); 
+
+
+var sqroot = Math.sqrt(PS).toFixed(4);
+document.write("<br>"); 
+document.write("square root is: ");  
+document.write(sqroot);  
+document.write("<br>"); 
+
+
+
+
+/* formula  */
+
+/**************************************/
+
+if  ( lastChar= "1")
+{
+var fam01 = (PS-1)/30
+var fam11 = (PS-11)/30
+var fam21 = (PS-21)/30
+var mod01 = (fam01 % 1)
+var mod11 = (fam11 % 1)
+var mod21 = (fam21 % 1)
+
+/**************************************/
+if  (mod01 == 1 || PS-1==0)
+{
+document.write("<br>"+ "Prime Suspect " + PS + " belongs to *fam01 " );
+document.write("<br><br>"+ "Prime Suspect Level is " + fam01 );
+}
+/**************************************/
+if  (mod11 == 1 || PS-11==0)
+{
+document.write("<br>" + "Prime Suspect "+ PS + " belongs to *fam11 " );
+document.write("<br><br>"+ "Prime Suspect Level is " + fam11 );
+}
+/**************************************/
+if  (mod21 == 1 ||  PS-21==0)
+{
+document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );
+}
+}
+                  
+/**************************************/
+if  ( lastChar= "3")
+{
+var fam03 = (PS-3)/30
+var fam13 = (PS-13)/30
+var fam23 = (PS-23)/30
+var mod03 = (fam03 % 1)
+var mod13 = (fam13 % 1)
+var mod23 = (fam23 % 1)
+
+/*
+document.write("<br><br>"+ fam03 + " mod  is " + mod03 );
+document.write("<br><br>"+ fam13 + " mod  is " + mod13 );
+document.write("<br><br>"+ fam23 + " mod  is " + mod23 );
+document.write("<br><br>"+ " mod  is -----------------------------------"  );
+*/
+/**************************************/
+if  (mod13 == 0 || PS-13==0)
+{
+document.write("<br>"+ "Prime Suspect " + PS + " belongs to *fam13 " );
+document.write("<br><br>"+ "Prime Suspect Level is " + fam13 );
+}
+/**************************************/
+if  (mod23 == 0 || PS-23==0)
+{
+document.write("<br>" + "Prime Suspect "+ PS + " belongs to *fam23 " );
+document.write("<br><br>"+ "Prime Suspect Level is " + fam23 );
+}
+/**************************************/
+if  (mod03 == 0 ||  PS-3==0)
+{
+document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );
+document.write("<br><br>"+ "Non-Prime Suspect Level is " + fam03 );
+}
+}
+
+
+/**************************************/
+
+if  ( lastChar= "7")
+{
+var fam07 = (PS-7)/30
+var fam17 = (PS-17)/30
+var fam27 = (PS-27)/30
+var mod07 = (fam07 % 1)
+var mod17 = (fam17 % 1)
+var mod27 = (fam27 % 1)
+/**************************************/
+if  (mod07 == 0 || PS-7==0) 
+{
+document.write("<br>"+ "Prime Suspect " + PS + " belongs to *fam07 " );  
+document.write("<br><br>"+ "Prime Suspect Level is " + fam07 );
+}
+/**************************************/
+if  (mod17 == 0 || PS-17==0)
+{
+document.write("<br>" + "Prime Suspect "+ PS + " belongs to *fam17 " );  
+document.write("<br><br>"+ "Prime Suspect Level is " + fam17 );
+}
+/**************************************/
+if  (mod27 == 0 ||  PS-27==0)
+{
+document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );  
+}
+}
+
+
+
+
+/**************************************/
+if  ( lastChar= "9")
+{
+var fam09 = (PS-9)/30
+var fam19 = (PS-19)/30
+var fam29 = (PS-29)/30
+var mod09 = (fam09 % 1)
+var mod19 = (fam19 % 1)
+var mod29 = (fam29 % 1)
+
+
+/*document.write("<br><br>"+ fam09 + " mod  is " + mod09 );
+document.write("<br><br>"+ fam19 + " mod  is " + mod19 );
+document.write("<br><br>"+ fam29 + " mod  is " + mod29 );
+document.write("<br><br>"+ " mod  is -----------------------------------"  );
+*/
+/**************************************/
+if  (mod19 == 0 || PS-19==0)
+{
+document.write("<br>"+ "Prime Suspect " + PS + " belongs to *fam19 " );
+document.write("<br><br>"+ "Prime Suspect Level is " + fam19 );
+}
+/**************************************/
+if  (mod29 == 0 || PS-29==0)
+{
+document.write("<br>" + "Prime Suspect "+ PS + " belongs to *fam29 " );
+document.write("<br><br>"+ "Prime Suspect Level is " + fam29 );
+}
+/**************************************/
+if  (mod09 == 0 ||  PS-9==0)
+{
+document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );
+document.write("<br><br>"+ "Non-Prime Suspect Level is " + fam09 );
+}
+}
+
+document.write("<hr>"); 
+
+
+  if  (mod07 == 0 || PS-7==0)
+{
+document.write("<b>*fam07 sub-keys are:")
+document.write('<ul>')
+document.write("<li>sub07*fam07 =  1  </li>")
+document.write("<li>sub07*fam11 = 17 </li>")
+document.write("<li>sub07*fam13 = 19 </li>")
+document.write("<li>sub07*fam17 = 11 </li>")
+document.write("<li>sub07*fam19 = 13 </li>")
+document.write("<li>sub07*fam23 = 29 </li>")
+document.write("<li>sub07*fam29 = 23 </li>")
+document.write("</ul>")
+}
+
+
+
+
+if  (mod11 == 1 || PS-11==0)
+{
+document.write("<b>*fam11 sub-keys are:")
+document.write('<ul>')
+document.write("<li>sub11*fam07 = 23 </li>")
+document.write("<li>sub11*fam11 =  1 </li>")
+document.write("<li>sub11*fam13 = 17 </li>")
+document.write("<li>sub11*fam17 = 13 </li>")
+document.write("<li>sub11*fam19 = 29 </li>")
+document.write("<li>sub11*fam23 =  7 </li>")
+document.write("<li>sub11*fam29 = 19 </li>")
+document.write("</ul>")
+}
+
+
+
+
+if  (mod13 == 0 || PS-13==0)
+{
+document.write("<b>*fam13 sub-keys are:")
+document.write('<ul>')
+document.write("<li>sub13*fam07 = 19 </li>")
+document.write("<li>sub13*fam11 = 23 </li>")
+document.write("<li>sub13*fam13 =  1 </li>")
+document.write("<li>sub13*fam17 = 29 </li>")
+document.write("<li>sub13*fam19 =  7 </li>")
+document.write("<li>sub13*fam23 = 11 </li>")
+document.write("<li>sub13*fam29 = 17 </li>")
+document.write("</ul>")
+}
+
+
+if  (mod17 == 0 || PS-17==0)
+{
+document.write("<b>*fam17 sub-keys are:")
+document.write('<ul>')
+document.write("<li>sub17*fam07 = 11 </li>")
+document.write("<li>sub17*fam11 =  7 </li>")
+document.write("<li>sub17*fam13 = 29 </li>")
+document.write("<li>sub17*fam17 =  1 </li>")
+document.write("<li>sub17*fam19 = 23 </li>")
+document.write("<li>sub17*fam23 = 19 </li>")
+document.write("<li>sub17*fam29 = 13 </li>")
+document.write("</ul>")
+}
+
+if  (mod19 == 0 || PS-19==0)
+{
+document.write("<b>*fam19 sub-keys are:")
+document.write('<ul>')
+document.write("<li>sub19*fam07 =  7 </li>")
+document.write("<li>sub19*fam11 = 29 </li>")
+document.write("<li>sub19*fam13 = 13 </li>")
+document.write("<li>sub19*fam17 = 17 </li>")
+document.write("<li>sub19*fam19 =  1 </li>")
+document.write("<li>sub19*fam23 = 23 </li>")
+document.write("<li>sub19*fam29 = 11 </li>")
+document.write("</ul>")
+}
+
+
+
+if  (mod23 == 0 || PS-23==0)
+{
+document.write("<b>*fam23 sub-keys are:")
+document.write('<ul>')
+document.write("<li>sub23*fam07 = 29 </li>")
+document.write("<li>sub23*fam11 = 13 </li>")
+document.write("<li>sub23*fam13 = 11 </li>")
+document.write("<li>sub23*fam17 = 19 </li>")
+document.write("<li>sub23*fam19 = 17 </li>")
+document.write("<li>sub23*fam23 =  1 </li>")
+document.write("<li>sub23*fam29 =  7 </li>")
+document.write("</ul>")
+}
+
+
+
+if  (mod29 == 0 || PS-29==0)
+{
+document.write("<b>*fam29 sub-keys are:")
+document.write('<ul>')
+document.write("<li>sub29*fam07 = 17 </li>")
+document.write("<li>sub29*fam11 = 19 </li>")
+document.write("<li>sub29*fam13 = 23 </li>")
+document.write("<li>sub29*fam17 =  7 </li>")
+document.write("<li>sub29*fam19 = 11 </li>")
+document.write("<li>sub29*fam23 = 13 </li>")
+document.write("<li>sub29*fam29 =  1 </li>")
+document.write("</ul>")
+}
+
+
+ document.write("<hr>")
+
+<!-- assign var for sub-keys and loop -->
+if  (mod07 == 0 || PS-7==0)
+{
+var sub07*fam07 =  1
+var sub07*fam11 = 17
+var sub07*fam13 = 19
+var sub07*fam17 = 11
+var sub07*fam19 = 13
+var sub07*fam23 = 29
+var sub07*fam29 = 23
+}
+
+
+if  (mod11 == 1 || PS-11==0)
+{
+var sub11*fam07 = 23
+var sub11*fam11 =  1
+var sub11*fam13 = 17
+var sub11*fam17 = 13
+var sub11*fam19 = 29
+var sub11*fam23 =  7
+var sub11*fam29 = 19
+}
+
+
+if  (mod13 == 0 || PS-13==0)
+{
+var sub13*fam07 = 19
+var sub13*fam11 = 23
+var sub13*fam13 =  1
+var sub13*fam17 = 29
+var sub13*fam19 =  7
+var sub13*fam23 = 11
+var sub13*fam29 = 17
+}
+
+
+if  (mod17 == 0 || PS-17==0)
+{
+var sub17*fam07 = 11
+var sub17*fam11 =  7
+var sub17*fam13 = 29
+var sub17*fam17 =  1
+var sub17*fam19 = 23
+var sub17*fam23 = 19
+var sub17*fam29 = 13
+}
+
+
+if  (mod19 == 0 || PS-19==0)
+{
+var sub19*fam07 =  7
+var sub19*fam11 = 29
+var sub19*fam13 = 13
+var sub19*fam17 = 17
+var sub19*fam19 =  1
+var sub19*fam23 = 23
+var sub19*fam29 = 11
+}
+
+
+if  (mod23 == 0 || PS-23==0)
+{
+var sub23*fam07 = 29
+var sub23*fam11 = 13
+var sub23*fam13 = 11
+var sub23*fam17 = 19
+var sub23*fam19 = 17
+var sub23*fam23 =  1
+var sub23*fam29 =  7
+}
+
+
+if  (mod29 == 0 || PS-29==0)
+{
+var sub29*fam07 = 17
+var sub29*fam11 = 19
+var sub29*fam13 = 23
+var sub29*fam17 =  7
+var sub29*fam19 = 11
+var sub29*fam23 = 13
+var sub29*fam29 =  1
+}
+
+
+
+
+
+
+
+
+
+
+
+                                    
+ 
+ 
+<!-- end function -->
+}
+ </script>
+ 
+
+<!-- ##################### -->	
+</div><!-- /.blurb -->
