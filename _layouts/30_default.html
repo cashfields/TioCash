@@ -1,13 +1,51 @@
----
-title: my home page title
-layout: 30_default
----
-<div class="blurb">
-<!-- ##################### -->	
-<!-- --> 
+<!DOCTYPE html>
+        <head>
+          
+                        <title>{{ page.title }}</title>
+                        <!-- link to main stylesheet -->
+                  <!--     <link rel="stylesheet" type="text/css" href="https://cashfields.github.io/TioCash/css/main.css">   -->
+	                   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+
+<script>
+		
+function getURL() 
+{
+var windowurl = window.location.href;
+	document.getElementById("windowname").innerHTML = windowurl;
+	//alert(windowurl)
+}
+</script>
+		
+		
+         </head>
 
 
 
 
-<!-- ##################### -->	
-</div><!-- /.blurb -->
+<body onload="javascript:getURL()"> 		
+	
+
+	
+                      <a href="https://cashfields.github.io/TioCash/index.html">Home</a>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <a href="mailto:cashfieldsutc@gmail.com" target="_blank">email</a></li>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <a href="https://github.com/cashfields/tiocash" target="_blank">TioCash Project</a>
+&nbsp;&nbsp;&nbsp;&nbsp;		
+<span id="windowname"></span>   		
+
+<input id="calc"  />
+ <button onclick="calculate()">calculate</button>
+ <div id="result"></div>
+
+
+                        <div class="container">
+
+                        {{ content }}
+
+                       </div><!-- /.container -->
+                        <footer>
+                    
+                        </footer>
+                </body>
+        </html>
