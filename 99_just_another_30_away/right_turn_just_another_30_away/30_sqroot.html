@@ -16,11 +16,569 @@ for the logic to use the *fam sub-keys and index to the right 'just another 30 a
 <img border="0" src="mod5-a.png" alt="name" width="1600" height="800" />
 
 	
+
+
+<br>   ?right turn sub-keys?
+<br>
+<br>  eliminate 2 3 5 and all even
+<br>
+<br>  look a *1 *3 *7 *9 wildcards
+<br>
+<br>
+
+
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="4"><b>eliminate *fam divisible by 3 </b></th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">*fam3</td>
+<td style="text-align:center">*fam9</td>
+<td style="text-align:center">*fam21</td>
+<td style="text-align:center">*fam27</td>
+</tr>
+</tbody>
+
+</table>
+
+<br>
+<br> These are the eight *fam equations to focus on
+<br>
+<br>
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="2"><b>keep *fam</b></th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">*fam01</td>
+<td style="text-align:center">*fam11</td>
+</tr>
+<td style="text-align:center">*fam07</td>
+<td style="text-align:center">*fam17</td>
+</tr>
+<tr>
+<td style="text-align:center">*fam13</td>
+<td style="text-align:center">*fam23</td>
+</tr>
+<td style="text-align:center">*fam19</td>
+<td style="text-align:center">*fam29</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+<br>
+<br>
+<br>  Test what family  PS (Prime Suspect) belongs to
+<br>
+<br>      if  [ MOD ( ( PS - *fam ) / 30 ) / 1 ] =  [ MOD ( PSL ) 1 ] = 0
+<br>      then assign that *fam
+<br>
+<br>  PSL - Prime Suspect Level - count consecutively within a *fam
+<br>
+<br>
+<hr>
+<br>  Inside each *fam where PSL = 0 is a unique set of sub-keys
+<br>  The sub-keys <b><em>can not</em></b> be applied to any other *fam
+<br>  The PSL = 0 is the first level , and the unique keys are generated here
+<br>  Only these sub-keys will satisfy this PS at this level
+<br>  We have sorted off all the other possible solutions
+<br>  Note that the <b>*fam sub-key of 1</b> is equal to the *fam in the table
+<br>  Note how the sub-keys are balanced thru the table symmetrically to make 30
+<br>
+<hr>
+<br>  <b>*fam tables and sub-keys</b>
+<br>
+<br>
+<br>  In order to clarify which direction we are headed
+      the term "*fam" is going down hill
+<br>  The new term of the sub-keys will be called:
+<br>
+
+       <ul>
+<li> example: sub07*fam07</li>
+<li> sub - indicating a sub-key</li>
+<li> 07  - indicating a *fam of PS going down hill</li>
+<li> *fam07 - indicating a sub-key going right - toward the square root</li>
+       </ul>
+<br>
+<br>
+
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="3"><b>*fam07</b></th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">*fam</td>
+<td style="text-align:center">initial sub-key</td>
+<td style="text-align:center">level and offset </td>
+</tr>
+<tr>
+<td style="text-align:center">sub07*fam01</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">           </td>
+</tr>
+<tr>
+<td style="text-align:center"><b>sub07*fam07</b></td>
+<td style="text-align:center"><b>1</b></td>
+<td style="text-align:center"><b>L0 and +7 </b></td>
+</tr>
+<tr>
+<td style="text-align:center">sub07*fam11</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">L6 and +11 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub07*fam13</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">L21 and +13 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub07*fam17</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">L23 and +17 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub07*fam19</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">L8  and +19 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub07*fam23</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">L22 and +23 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub07*fam29</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">L22 and +29 </td>
+</tr>
+</table>
+
+
+
+<br>
+<br>
+<br>
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="3"><b>*fam11</b></th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">sub11*fam</td>
+<td style="text-align:center">initial sub-key</td>
+<td style="text-align:center">level and offset </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam01</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">           </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam07</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">L5 and +7 </td>
+</tr>
+<tr>
+<td style="text-align:center"><b>sub11*fam11<b></td>
+<td style="text-align:center"><b>1</b></td>
+<td style="text-align:center"><b>L0 and +11 </b></td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam13</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">L7 and +13 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam17</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">L7 and +17 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam19</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">L18  and +19 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam23</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">L5 and +23 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam29</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">L18 and +29 </td>
+</tr>
+</table>
+
+
+<br>
+<br>
+<br>
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="3"><b>*fam13</b></th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">sub13*fam</td>
+<td style="text-align:center">initial sub-key</td>
+<td style="text-align:center">level and offset </td>
+</tr>
+<tr>
+<td style="text-align:center">sub13*fam01</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">           </td>
+</tr>
+<tr>
+<td style="text-align:center">sub13*fam07</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">L4 and +7 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub13*fam11</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">L8 and +11 </td>
+</tr>
+<tr>
+<td style="text-align:center"><b>sub13*fam13</b></td>
+<td style="text-align:center"><b>1</b></td>
+<td style="text-align:center"><b>L0 and +13 </b></td>
+</tr>
+<tr>
+<td style="text-align:center">sub13*fam17</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">L16and +17 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub13*fam19</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">L4  and +19 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam23</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">L8 and +23 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam29</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">L16 and +29 </td>
+</tr>
+</table>
+
+
+<br>
+<br>
+<br>
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="3"><b>*fam17</b></th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">sub17*fam</td>
+<td style="text-align:center">initial sub-key</td>
+<td style="text-align:center">level and offset </td>
+</tr>
+<tr>
+<td style="text-align:center">sub17*fam01</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">          </td>
+</tr>
+<tr>
+<td style="text-align:center">sub17*fam07</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">L2 and +7 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub17*fam11</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">L2 and +11 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub17*fam13</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">L12 and +13 </td>
+</tr>
+<tr>
+<td style="text-align:center"><b>sub17*fam17</b></td>
+<td style="text-align:center"><b>1</b></td>
+<td style="text-align:center"><b>L06 and +17 </b></td>
+</tr>
+<tr>
+<td style="text-align:center">sub17*fam19</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">L14  and +19 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam23</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">L14 and +23 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam29</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">L12 and +29 </td>
+</tr>
+</table>
+
+
+<br>
+<br>
+<br>
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="3"><b>*fam19</b></th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">sub19*fam</td>
+<td style="text-align:center">initial sub-key</td>
+<td style="text-align:center">level and offset </td>
+</tr>
+<tr>
+<td style="text-align:center">sub19*fam01</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">           </td>
+</tr>
+<tr>
+<td style="text-align:center">sub19*fam07</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">L1 and +7 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub19*fam11</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">L10 and +11 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub19*fam13</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">L5 and +13 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub19*fam17</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">L9 and +17 </td>
+</tr>
+<tr>
+<td style="text-align:center"><b>sub19*fam19</b></td>
+<td style="text-align:center"><b>1</b></td>
+<td style="text-align:center"><b>L0  and +19 </b></td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam23</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">L17 and +23 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam29</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">L10and +29 </td>
+</tr>
+</table>
+
+
+
+<br>
+<br>
+<br>
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="3">*fam23</th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">sub23*fam</td>
+<td style="text-align:center">initial sub-key</td>
+<td style="text-align:center">level and offset </td>
+</tr>
+<tr>
+<td style="text-align:center">sub23*fam01</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">           </td>
+</tr>
+<tr>
+<td style="text-align:center">sub23*fam07</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">L6 and +7 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub23*fam11</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">L4 and +11 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub23*fam13</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">L4 and +13 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub23*fam17</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">L10 and +17 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub23*fam19</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">L10  and +19 </td>
+</tr>
+<tr>
+<td style="text-align:center"><b>sub11*fam23</b></td>
+<td style="text-align:center"><b>1<b></td>
+<td style="text-align:center"><b>L0 and +23 </b></td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam29</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">L16 and +29 </td>
+</tr>
+</table>
+
+
+
+<br>
+<br>
+<br>
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="3">*fam29</th>
+        </tr>
+    </thead>
+
+
+<tbody>
+<tr>
+<td style="text-align:center">sub29*fam</td>
+<td style="text-align:center">initial sub-key</td>
+<td style="text-align:center">level and offset </td>
+</tr>
+<tr>
+<td style="text-align:center">sub29*fam01</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">           </td>
+</tr>
+<tr>
+<td style="text-align:center">sub29*fam07</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">L3 and +7 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub29*fam11</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">L6 and +11 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub29*fam13</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">L9 and +13 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub29*fam17</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">L3 and +17 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub29*fam19</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">L6  and +19 </td>
+</tr>
+<tr>
+<td style="text-align:center">sub11*fam23</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">L9 and +23 </td>
+</tr>
+<tr>
+<td style="text-align:center"><b>sub11*fam29</b></td>
+<td style="text-align:center"><b>1</b></td>
+<td style="text-align:center"><b>L0 and +29 </b></td>
+</tr>
+</table>
+
+
+
+
+
+<br>
+<br>
+<br>  Find the square root of PS
+<br>
+<br>  Use the sub-keys and loop to the right: sub-key + 30
+<br>
+<br>  Add 'just another 30 away' until
+<br>         a) a factor is found
+<br>         or
+<br>         b) the square root of PS is reached
+<br>
+<br>  If a factor is found = non-prime
+<br>
+<br>  If no factor is found = prime
+<br>
+<br>
+<br>
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 
 <!--           	
-<a href=”https://www.example.com/sample.pdf#page=20″>link text</a>
+comment
 -->   
 
 
