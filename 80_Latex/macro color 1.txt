@@ -1,0 +1,206 @@
+                                                                                         \\
+'''''''                                                                                  \\
+' file must be XLSM                                                                      \\
+'' In "THIS WORKBOOK" place this                                                         \\
+                                                                                         \\
+Public passfam As Long                                                                   \\
+Public returnfac As String                                                               \\
+                                                                                         \\
+Sub calc()                                                                               \\
+                                                                                         \\
+Dim x As Long                                                                            \\
+Dim y As Long                                                                            \\
+Dim K As Long                                                                            \\
+                                                                                         \\
+Dim sList As String                                                                      \\
+Dim color As Integer                                                                     \\
+                                                                                         \\
+Range("b1").Select                                                                       \\
+                                                                                         \\
+fam1 = 1                                                                                 \\
+fam7 = 7                                                                                 \\
+fam11 = 11                                                                               \\
+fam13 = 13                                                                               \\
+fam17 = 17                                                                               \\
+fam19 = 19                                                                               \\
+fam23 = 23                                                                               \\
+fam29 = 29                                                                               \\
+                                                                                         \\
+startloc = ActiveCell.Address                                                            \\
+big = 50                                                                                 \\
+                                                                                         \\
+For j = 0 To big                                                                         \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=1 + (j * 8), columnOffset:=0).Value = fam1                  \\
+ActiveCell.Offset(rowOffset:=1 + (j * 8), columnOffset:=0).Interior.ColorIndex = (3)     \\
+passfam = fam1                                                                           \\
+Call callfactor2(passfam)                                                                \\
+returnfac = "'" + returnfac                                                              \\
+ActiveCell.Offset(rowOffset:=1 + (j * 8), columnOffset:=-1).Value = returnfac            \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=2 + (j * 8), columnOffset:=0).Value = fam7                  \\
+ActiveCell.Offset(rowOffset:=2 + (j * 8), columnOffset:=0).Interior.ColorIndex = (4)     \\
+passfam = fam7                                                                           \\
+Call callfactor2(passfam)                                                                \\
+returnfac = "'" + returnfac                                                              \\
+ActiveCell.Offset(rowOffset:=2 + (j * 8), columnOffset:=-1).Value = returnfac            \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=3 + (j * 8), columnOffset:=0).Value = fam11                 \\
+ActiveCell.Offset(rowOffset:=3 + (j * 8), columnOffset:=0).Interior.ColorIndex = (6)     \\
+passfam = fam11                                                                          \\
+Call callfactor2(passfam)                                                                \\
+returnfac = "'" + returnfac                                                              \\
+ActiveCell.Offset(rowOffset:=3 + (j * 8), columnOffset:=-1).Value = returnfac            \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=4 + (j * 8), columnOffset:=0).Value = fam13                 \\
+ActiveCell.Offset(rowOffset:=4 + (j * 8), columnOffset:=0).Interior.ColorIndex = (8)     \\
+passfam = fam13                                                                          \\
+Call callfactor2(passfam)                                                                \\
+returnfac = "'" + returnfac                                                              \\
+ActiveCell.Offset(rowOffset:=4 + (j * 8), columnOffset:=-1).Value = returnfac            \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=5 + (j * 8), columnOffset:=0).Value = fam17                 \\
+ActiveCell.Offset(rowOffset:=5 + (j * 8), columnOffset:=0).Interior.ColorIndex = (33)    \\
+passfam = fam17                                                                          \\
+Call callfactor2(passfam)                                                                \\
+returnfac = "'" + returnfac                                                              \\
+ActiveCell.Offset(rowOffset:=5 + (j * 8), columnOffset:=-1).Value = returnfac            \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=6 + (j * 8), columnOffset:=0).Value = fam19                 \\
+ActiveCell.Offset(rowOffset:=6 + (j * 8), columnOffset:=0).Interior.ColorIndex = (36)    \\
+passfam = fam19                                                                          \\
+Call callfactor2(passfam)                                                                \\
+returnfac = "'" + returnfac                                                              \\
+ActiveCell.Offset(rowOffset:=6 + (j * 8), columnOffset:=-1).Value = returnfac            \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=7 + (j * 8), columnOffset:=0).Value = fam23                 \\
+ActiveCell.Offset(rowOffset:=7 + (j * 8), columnOffset:=0).Interior.ColorIndex = (43)    \\
+passfam = fam23                                                                          \\
+Call callfactor2(passfam)                                                                \\
+returnfac = "'" + returnfac                                                              \\
+ActiveCell.Offset(rowOffset:=7 + (j * 8), columnOffset:=-1).Value = returnfac            \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=8 + (j * 8), columnOffset:=0).Value = fam29                 \\
+ActiveCell.Offset(rowOffset:=8 + (j * 8), columnOffset:=0).Interior.ColorIndex = (46)    \\
+passfam = fam29                                                                          \\
+Call callfactor2(passfam)                                                                \\
+returnfac = "'" + returnfac                                                              \\
+ActiveCell.Offset(rowOffset:=8 + (j * 8), columnOffset:=-1).Value = returnfac            \\
+                                                                                         \\
+fam1 = fam1 + 30                                                                         \\
+fam7 = fam7 + 30                                                                         \\
+fam11 = fam11 + 30                                                                       \\
+fam13 = fam13 + 30                                                                       \\
+fam17 = fam17 + 30                                                                       \\
+fam19 = fam19 + 30                                                                       \\
+fam23 = fam23 + 30                                                                       \\
+fam29 = fam29 + 30                                                                       \\
+                                                                                         \\
+Next                                                                                     \\
+                                                                                         \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''                                \\
+Range("b2").Select                                                                       \\
+                                                                                         \\
+'stop screen update                                                                      \\
+Application.ScreenUpdating = False                                                       \\
+                                                                                         \\
+'big loop many rows                                                                      \\
+                                                                                         \\
+For b = 1 To (big + 1)                                                                   \\
+                                                                                         \\
+'MsgBox ActiveCell.Address                                                               \\
+For color = 1 To 8                                                                       \\
+                                                                                         \\
+lNumber = ActiveCell.Value                                                               \\
+sqroot = Sqr(lNumber)                                                                    \\
+'MsgBox (sqroot)                                                                         \\
+sqint = Int(sqroot)                                                                      \\
+'MsgBox (sqint)                                                                          \\
+                                                                                         \\
+y = 0                                                                                    \\
+For x = 1 To (lNumber)                                                                   \\
+                                                                                         \\
+'''''''''''''''''''''''''''''''''''                                                      \\
+''''''''''fix gray color for sqroot                                                      \\
+'If x = sqround Then                                                                     \\
+If x = sqint Then                                                                        \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (15)              \\
+End If                                                                                   \\
+                                                                                         \\
+'If Int(lNumber / x) = lNumber / x Then                                                  \\
+y = lNumber Mod x                                                                        \\
+                                                                                         \\
+''''''''''''' fix colors for *pairs                                                      \\
+If y = 0 Then                                                                            \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Borders.LineStyle = xlContinuous        \\
+                                                                                         \\
+If (color = 1) Then                                                                      \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (3)               \\
+                                                                                         \\
+End If                                                                                   \\
+If (color = 8) Then                                                                      \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (46)              \\
+End If                                                                                   \\
+                                                                                         \\
+If (color = 2) Then                                                                      \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (4)               \\
+End If                                                                                   \\
+If (color = 7) Then                                                                      \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (43)              \\
+End If                                                                                   \\
+                                                                                         \\
+If (color = 3) Then                                                                      \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (6)               \\
+End If                                                                                   \\
+If (color = 6) Then                                                                      \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (36)              \\
+End If                                                                                   \\
+                                                                                         \\
+If (color = 4) Then                                                                      \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (8)               \\
+End If                                                                                   \\
+If (color = 5) Then                                                                      \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Interior.ColorIndex = (33)              \\
+End If                                                                                   \\
+                                                                                         \\
+End If                                                                                   \\
+''''''''''''''''''' end color '''''''''''''''''                                          \\
+'MsgBox ("y " & y)                                                                       \\
+sList = y                                                                                \\
+                                                                                         \\
+'MsgBox (sList)                                                                          \\
+' ActiveSheet.Cells(x + 1, 0).Select                                                     \\
+ 'ActiveSheet.Cells(0, x + 1).Value = y                                                  \\
+                                                                                         \\
+'Cells(3, 2).Value = y                                                                   \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=0, columnOffset:=1).Activate                                \\
+ActiveCell.Value = y                                                                     \\
+'End If                                                                                  \\
+Next                                                                                     \\
+                                                                                         \\
+ActiveCell.Offset(rowOffset:=1, columnOffset:=-lNumber).Activate                         \\
+                                                                                         \\
+Next                                                                                     \\
+                                                                                         \\
+'start screen update                                                                     \\
+                                                                                         \\
+Next                                                                                     \\
+                                                                                         \\
+Application.ScreenUpdating = True                                                        \\
+End Sub                                                                                  \\
+                                                                                         \\
+Sub callfactor2(passfam As Long)                                                         \\
+returnfac = FactorNumber2(passfam)                                                       \\
+End Sub                                                                                  \\
+                                                                                         \\
