@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {1}Why ?}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Why ? - And A Reason}{2}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Results}{2}{subsection.1.2}
