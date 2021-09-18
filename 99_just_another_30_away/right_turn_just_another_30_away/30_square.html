@@ -92,17 +92,16 @@ Each *fam is color coded. And each 'just another 30 away' group is hi-lited.
 
 <br>
 <br>
-<br>  Test what family  PS (Prime Suspect) belongs to
+<br>  Test what *fam (family) PS (Prime Suspect) belong to ; and assign the PSL (Prime Suspect Level) 
 <br>
 <br>      if  [ MOD ( ( PS - *fam ) / 30 ) , 1 ] = 0
 <br>       
 <br>      then assign that *fam
-<br>
-<br>  PSL - Prime Suspect Level - counted consecutively within a *fam
-<br>      
-<br>      PSL =  if  { [ MOD ( ( PS - *fam ) / 30 ) , 1 ] = 0 } = true
-<br> 
 <br>      then assign PSL = [ ( PS - *fam ) / 30 ]
+<br>
+<br>
+<br>  PSL - Prime Suspect Level - are counted consecutively within a *fam
+<br>      
 <br>
 <hr>
 <br>  Inside each *fam where PSL = 0 is a unique set of sub-keys - this is the base layer
