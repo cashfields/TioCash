@@ -37,3 +37,12 @@ SHINE FOR YOUR LIGHT HAS COME
                      HAPPY TRAILS TO YOU , UNTIL WE MEET AGAIN
 
                         I LEARN BY GOING WHERE I HAVE TO GO
+                        
+                        
+                        
+echo         I know indeed how to live in humble                 
+echo         circimstances ; I know also how to live             
+echo         with abundance.  In every circumstance and          
+echo         in all things I have learned the secret             
+echo         of being well fed and going hungry , of living      
+echo         in abundance and of being in need.                  
