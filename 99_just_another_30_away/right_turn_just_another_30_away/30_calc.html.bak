@@ -1,125 +1,142 @@
-<!DOCTYPE html>
-        <head>
-          
-                        <title>my home page title</title>
-                        <!-- link to main stylesheet -->
-                  <!--     <link rel="stylesheet" type="text/css" href="https://cashfields.github.io/TioCash/css/main.css">   -->
-	                   <link rel="stylesheet" href="/TioCash/css/main.css">
+---
+title: my home page title
+layout: default
+---
+<div class="blurb">
+<!-- ##################### -->	
+<!-- -->     
 
-<script>
-		
-function getURL() 
-{
-var windowurl = window.location.href;
-	document.getElementById("windowname").innerHTML = windowurl;
-	//alert(windowurl)
-}
-</script>
-		
-		
-         </head>
-
-
-
-
-<body onload="javascript:getURL()"> 		
-	
-
-	
-                      <a href="https://cashfields.github.io/TioCash/index.html">Home</a>
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      <a href="mailto:cashfieldsutc@gmail.com" target="_blank">email</a></li>
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      <a href="https://github.com/cashfields/tiocash" target="_blank">TioCash Project</a>
-&nbsp;&nbsp;&nbsp;&nbsp;		
-<span id="windowname"></span>   		
-
-
-                        <div class="container">
  
-
-
+<br>
+<br> Look for Prime Numbers using *wildcard and *fam ; and 'just another 30 away' rules.
+<br>
+<br> Enter a number and press the 'calculate' button.
+<br>
 <br>
  <input id="calc"  />
  <button onclick="calculate()">calculate</button>
  <div id="result"></div>
- 
 
- 
+
+
+
+
  <script>
+
+
+
+
+
+ /*fx - magic*/
 function calculate(){
     document.getElementById('result')
   .innerText=eval(document.getElementById('calc').value);
-  
 
-  
+/**********************************/
+/*set global flag of non-prime to FALSE */
+var nonprimeflag = "FALSE"
+/* set global counters and factor collectors */
+var cntTRUE = 0
+ var factorTRUE = ("Factors are :  ")
+
+
+
   var PS = eval(document.getElementById('calc').value)
-document.write("<br>"); 
-document.write("Prime Suspect (PS) is: ");  
-document.write(PS);  
-document.write("<br>"); 
-/* a number test */
-/*
-var pstext = PS - 7;
-document.write(pstext ); 
-document.write("<br> here" ); 
-*/
+
+  /*document.write("<div<a href='https://cashfields.github.io/TioCash/00_The_Origin/readme.html' style='background:#CD5C5C>reload</a></div>");  */
+ <a href="https://cashfields.github.io/TioCash/99_just_another_30_away/right_turn_just_another_30_away/30_calc.html" style="background-color:#ffffa0">reload page</a> 
+/*document.write("<a href='https://cashfields.github.io/TioCash/00_The_Origin/readme.html'>reload</a>");  */
+/* document.write("<div style='background:#A0CE4E;><span style='font-size:16px;'><strong>"+ PS +" is a prime number</strong></span></div>"); */
+
+
+/*document.write("<br>"); */
+document.write("Prime Suspect (PS) is: " + PS + "<br>");
+/* get *wildcard */
 var toText = PS.toString(); //convert to string
 var lastChar = toText.slice(-1); //gets last character
 var lastDigit = +(lastChar); //convert last character to number
+/**********************************/
+
+document.write("<br>*wildcard is:  " + lastDigit );
+document.write("<br>")
+
 /*
-console.log(lastDigit); //5
-document.write("<br> here convert : "); 
+var PSsqroot = Math.sqrt(PS).toFixed(2);
+document.write("<br> square root is: " + PSsqroot + "<br>");
+var PSsquare = PS * PS;
+document.write("<br> PS Squared is: " + PSsquare + "<br>");
 */
-document.write("<br>"); 
-document.write("*wildcard is: ");  
-document.write(lastDigit);  
-document.write("<br>"); 
 
+/* sort off 2 , 3 , 5 , all even */
+if ( PS == 2 || PS == 3 || PS == 5)
+{
+document.write("<hr>")
+document.write("<br>PS is Prime")
+document.write("<br>PS: " + PS )
+throw "";
+}
 
-var sqroot = Math.sqrt(PS).toFixed(4);
-document.write("<br>"); 
-document.write("square root is: ");  
-document.write(sqroot);  
-document.write("<br>"); 
-
-
+if  ( lastDigit== 2 ||  lastDigit== 4 || lastDigit== 6 || lastDigit== 8 || lastDigit== 0 || lastDigit== 5)
+{
+ document.write("<hr>")
+document.write("<br>" + "Prime Suspect: "+ PS + " is non-prime ; composite" );
+nonprimeflag = "TRUE"
+throw "";
+}
 
 
 /* formula  */
 
 /**************************************/
 
-if  ( lastChar= "1")
+if  ( lastDigit == "1")
 {
+console.log("lastDigit is: " + lastDigit)
 var fam01 = (PS-1)/30
+console.log("fam01: " + fam01)
+
 var fam11 = (PS-11)/30
+console.log("fam11: " + fam11)
+
 var fam21 = (PS-21)/30
+console.log("fam21: " + fam21)
+
 var mod01 = (fam01 % 1)
+console.log("mod01: " + mod01)
+
 var mod11 = (fam11 % 1)
+console.log("mod11: " + mod11)
+
 var mod21 = (fam21 % 1)
+console.log("mod21: " + mod21)
 
 /**************************************/
-if  (mod01 == 1 || PS-1==0)
+if  (mod01 == 0 || PS-1==0)
 {
-document.write("<br>"+ "Prime Suspect " + PS + " belongs to *fam01 " );
-document.write("<br><br>"+ "Prime Suspect Level is " + fam01 );
+console.log("inside  mod01")
+document.write("<br>"+ "Prime Suspect: " + PS + " belongs to *fam01 " );
+document.write("<br><br>"+ "Prime Suspect Level is: " + fam01 );
+var PSL = fam01
 }
 /**************************************/
-if  (mod11 == 1 || PS-11==0)
+if  (mod11 == 0 || PS-11==0)
 {
-document.write("<br>" + "Prime Suspect "+ PS + " belongs to *fam11 " );
-document.write("<br><br>"+ "Prime Suspect Level is " + fam11 );
+console.log("inside  mod11")
+document.write("<br>" + "Prime Suspect: "+ PS + " belongs to *fam11 " );
+document.write("<br><br>"+ "Prime Suspect Level is: " + fam11 );
+var PSL = fam11
 }
 /**************************************/
-if  (mod21 == 1 ||  PS-21==0)
+if  (mod21 == 0 ||  PS-21==0)
 {
-document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );
+console.log("inside  mod21")
+document.write("<br>" + "Prime Suspect: "+ PS + " is non-prime ; composite" );
+nonprimeflag = "TRUE"
 }
 }
-                  
+
 /**************************************/
-if  ( lastChar= "3")
+if  ( lastDigit== "3")
 {
 var fam03 = (PS-3)/30
 var fam13 = (PS-13)/30
@@ -128,36 +145,34 @@ var mod03 = (fam03 % 1)
 var mod13 = (fam13 % 1)
 var mod23 = (fam23 % 1)
 
-/*
-document.write("<br><br>"+ fam03 + " mod  is " + mod03 );
-document.write("<br><br>"+ fam13 + " mod  is " + mod13 );
-document.write("<br><br>"+ fam23 + " mod  is " + mod23 );
-document.write("<br><br>"+ " mod  is -----------------------------------"  );
-*/
+
 /**************************************/
 if  (mod13 == 0 || PS-13==0)
 {
-document.write("<br>"+ "Prime Suspect " + PS + " belongs to *fam13 " );
-document.write("<br><br>"+ "Prime Suspect Level is " + fam13 );
+document.write("<br>"+ "Prime Suspect: " + PS + " belongs to *fam13 " );
+document.write("<br><br>"+ "Prime Suspect Level is: " + fam13 );
+var PSL = fam13
 }
 /**************************************/
 if  (mod23 == 0 || PS-23==0)
 {
-document.write("<br>" + "Prime Suspect "+ PS + " belongs to *fam23 " );
-document.write("<br><br>"+ "Prime Suspect Level is " + fam23 );
+document.write("<br>" + "Prime Suspect: "+ PS + " belongs to *fam23 " );
+document.write("<br><br>"+ "Prime Suspect Level is: " + fam23 );
+var PSL = fam23
 }
 /**************************************/
 if  (mod03 == 0 ||  PS-3==0)
 {
-document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );
-document.write("<br><br>"+ "Non-Prime Suspect Level is " + fam03 );
+document.write("<br>" + "Prime Suspect: "+ PS + " is non-prime ; composite" );
+document.write("<br><br>"+ "Non-Prime Suspect Level is: " + fam03 );
+nonprimeflag = "TRUE"
 }
 }
 
 
 /**************************************/
 
-if  ( lastChar= "7")
+if  ( lastDigit== "7")
 {
 var fam07 = (PS-7)/30
 var fam17 = (PS-17)/30
@@ -166,21 +181,24 @@ var mod07 = (fam07 % 1)
 var mod17 = (fam17 % 1)
 var mod27 = (fam27 % 1)
 /**************************************/
-if  (mod07 == 0 || PS-7==0) 
+if  (mod07 == 0 || PS-7==0)
 {
-document.write("<br>"+ "Prime Suspect " + PS + " belongs to *fam07 " );  
-document.write("<br><br>"+ "Prime Suspect Level is " + fam07 );
+document.write("<br>"+ "Prime Suspect: " + PS + " belongs to *fam07 " );
+document.write("<br><br>"+ "Prime Suspect Level is: " + fam07 );
+var PSL = fam07
 }
 /**************************************/
 if  (mod17 == 0 || PS-17==0)
 {
-document.write("<br>" + "Prime Suspect "+ PS + " belongs to *fam17 " );  
-document.write("<br><br>"+ "Prime Suspect Level is " + fam17 );
+document.write("<br>" + "Prime Suspect: "+ PS + " belongs to *fam17 " );
+document.write("<br><br>"+ "Prime Suspect Level is: " + fam17 );
+var PSL = fam17
 }
 /**************************************/
 if  (mod27 == 0 ||  PS-27==0)
 {
-document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );  
+document.write("<br>" + "Prime Suspect: "+ PS + " is non-prime ; composite" );
+nonprimeflag = "TRUE"
 }
 }
 
@@ -188,7 +206,7 @@ document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );
 
 
 /**************************************/
-if  ( lastChar= "9")
+if  ( lastDigit== "9")
 {
 var fam09 = (PS-9)/30
 var fam19 = (PS-19)/30
@@ -198,251 +216,1409 @@ var mod19 = (fam19 % 1)
 var mod29 = (fam29 % 1)
 
 
-/*document.write("<br><br>"+ fam09 + " mod  is " + mod09 );
-document.write("<br><br>"+ fam19 + " mod  is " + mod19 );
-document.write("<br><br>"+ fam29 + " mod  is " + mod29 );
-document.write("<br><br>"+ " mod  is -----------------------------------"  );
-*/
 /**************************************/
 if  (mod19 == 0 || PS-19==0)
 {
-document.write("<br>"+ "Prime Suspect " + PS + " belongs to *fam19 " );
-document.write("<br><br>"+ "Prime Suspect Level is " + fam19 );
+document.write("<br>"+ "Prime Suspect: " + PS + " belongs to *fam19 " );
+document.write("<br><br>"+ "Prime Suspect Level is: " + fam19 );
+var PSL = fam19
 }
 /**************************************/
 if  (mod29 == 0 || PS-29==0)
 {
-document.write("<br>" + "Prime Suspect "+ PS + " belongs to *fam29 " );
-document.write("<br><br>"+ "Prime Suspect Level is " + fam29 );
+document.write("<br>" + "Prime Suspect: " + PS + " belongs to *fam29 " );
+document.write("<br><br>"+ "Prime Suspect Level is: " + fam29 );
+var PSL = fam29
 }
 /**************************************/
 if  (mod09 == 0 ||  PS-9==0)
 {
-document.write("<br>" + "Prime Suspect "+ PS + " is non-prime ; composite" );
-document.write("<br><br>"+ "Non-Prime Suspect Level is " + fam09 );
+document.write("<br>" + "Prime Suspect: " + PS + " is non-prime ; composite" );
+document.write("<br><br>"+ "Non-Prime Suspect Level is: " + fam09 );
+nonprimeflag = "TRUE"
 }
 }
 
-document.write("<hr>"); 
+document.write("<hr>");
+
+
+  if  (mod01 == 0 || PS-1==0)
+{
+document.write("*fam01 sub-keys are in sub-key value order: ")
+document.write('<ul>')
+document.write("<li>sub01*fam01 =  1 </li>")
+document.write("<li>sub01*fam13 =  7</li>")
+document.write("<li>sub01*fam11 = 11</li>")
+document.write("<li>sub01*fam07 = 13 </li>")
+document.write("<li>sub01*fam23 = 17 </li>")
+document.write("<li>sub01*fam19 = 19 </li>")
+document.write("<li>sub01*fam17 = 23</li>")
+document.write("<li>sub01*fam29 = 29 </li>")
+document.write("</ul>")
+}
 
 
   if  (mod07 == 0 || PS-7==0)
 {
-document.write("<b>*fam07 sub-keys are:")
+document.write("*fam07 sub-keys are in sub-key value order: ")
 document.write('<ul>')
 document.write("<li>sub07*fam07 =  1  </li>")
-document.write("<li>sub07*fam11 = 17 </li>")
-document.write("<li>sub07*fam13 = 19 </li>")
+document.write("<li>sub07*fam01 =  7  </li>")
 document.write("<li>sub07*fam17 = 11 </li>")
 document.write("<li>sub07*fam19 = 13 </li>")
-document.write("<li>sub07*fam23 = 29 </li>")
+document.write("<li>sub07*fam11 = 17 </li>")
+document.write("<li>sub07*fam13 = 19 </li>")
 document.write("<li>sub07*fam29 = 23 </li>")
+document.write("<li>sub07*fam23 = 29 </li>")
 document.write("</ul>")
 }
 
 
-
-
-if  (mod11 == 1 || PS-11==0)
+if  (mod11 == 0 || PS-11==0)
 {
-document.write("<b>*fam11 sub-keys are:")
+document.write("*fam11 sub-keys are in sub-key value order: ")
 document.write('<ul>')
-document.write("<li>sub11*fam07 = 23 </li>")
 document.write("<li>sub11*fam11 =  1 </li>")
-document.write("<li>sub11*fam13 = 17 </li>")
-document.write("<li>sub11*fam17 = 13 </li>")
-document.write("<li>sub11*fam19 = 29 </li>")
 document.write("<li>sub11*fam23 =  7 </li>")
+document.write("<li>sub11*fam01 = 11 </li>")
+document.write("<li>sub11*fam17 = 13 </li>")
+document.write("<li>sub11*fam13 = 17 </li>")
 document.write("<li>sub11*fam29 = 19 </li>")
+document.write("<li>sub11*fam07 = 23 </li>")
+document.write("<li>sub11*fam19 = 29 </li>")
 document.write("</ul>")
 }
-
-
 
 
 if  (mod13 == 0 || PS-13==0)
 {
-document.write("<b>*fam13 sub-keys are:")
+document.write("*fam13 sub-keys are in sub-key value order: ")
 document.write('<ul>')
-document.write("<li>sub13*fam07 = 19 </li>")
-document.write("<li>sub13*fam11 = 23 </li>")
 document.write("<li>sub13*fam13 =  1 </li>")
-document.write("<li>sub13*fam17 = 29 </li>")
 document.write("<li>sub13*fam19 =  7 </li>")
 document.write("<li>sub13*fam23 = 11 </li>")
+document.write("<li>sub13*fam01 = 13 </li>")
 document.write("<li>sub13*fam29 = 17 </li>")
+document.write("<li>sub13*fam07 = 19 </li>")
+document.write("<li>sub13*fam11 = 23 </li>")
+document.write("<li>sub13*fam17 = 29 </li>")
+
 document.write("</ul>")
 }
 
 
 if  (mod17 == 0 || PS-17==0)
 {
-document.write("<b>*fam17 sub-keys are:")
+document.write("*fam17 sub-keys are in sub-key value order: ")
 document.write('<ul>')
-document.write("<li>sub17*fam07 = 11 </li>")
-document.write("<li>sub17*fam11 =  7 </li>")
-document.write("<li>sub17*fam13 = 29 </li>")
 document.write("<li>sub17*fam17 =  1 </li>")
-document.write("<li>sub17*fam19 = 23 </li>")
-document.write("<li>sub17*fam23 = 19 </li>")
+document.write("<li>sub17*fam11 =  7 </li>")
+document.write("<li>sub17*fam07 = 11 </li>")
 document.write("<li>sub17*fam29 = 13 </li>")
+document.write("<li>sub17*fam01 = 17 </li>")
+document.write("<li>sub17*fam23 = 19 </li>")
+document.write("<li>sub17*fam19 = 23 </li>")
+document.write("<li>sub17*fam13 = 29 </li>")
 document.write("</ul>")
 }
+
 
 if  (mod19 == 0 || PS-19==0)
 {
-document.write("<b>*fam19 sub-keys are:")
+document.write("*fam19 sub-keys are in sub-key value order: ")
 document.write('<ul>')
+document.write("<li>sub19*fam19 =  1 </li>")
 document.write("<li>sub19*fam07 =  7 </li>")
-document.write("<li>sub19*fam11 = 29 </li>")
+document.write("<li>sub19*fam29 = 11 </li>")
 document.write("<li>sub19*fam13 = 13 </li>")
 document.write("<li>sub19*fam17 = 17 </li>")
-document.write("<li>sub19*fam19 =  1 </li>")
+document.write("<li>sub19*fam01 = 19 </li>")
 document.write("<li>sub19*fam23 = 23 </li>")
-document.write("<li>sub19*fam29 = 11 </li>")
+document.write("<li>sub19*fam11 = 29 </li>")
 document.write("</ul>")
 }
-
 
 
 if  (mod23 == 0 || PS-23==0)
 {
-document.write("<b>*fam23 sub-keys are:")
+document.write("*fam23 sub-keys are in sub-key value order: ")
 document.write('<ul>')
-document.write("<li>sub23*fam07 = 29 </li>")
-document.write("<li>sub23*fam11 = 13 </li>")
-document.write("<li>sub23*fam13 = 11 </li>")
-document.write("<li>sub23*fam17 = 19 </li>")
-document.write("<li>sub23*fam19 = 17 </li>")
 document.write("<li>sub23*fam23 =  1 </li>")
 document.write("<li>sub23*fam29 =  7 </li>")
+document.write("<li>sub23*fam13 = 11 </li>")
+document.write("<li>sub23*fam11 = 13 </li>")
+document.write("<li>sub23*fam19 = 17 </li>")
+document.write("<li>sub23*fam17 = 19 </li>")
+document.write("<li>sub23*fam01 = 23 </li>")
+document.write("<li>sub23*fam07 = 29 </li>")
 document.write("</ul>")
 }
 
 
-
 if  (mod29 == 0 || PS-29==0)
 {
-document.write("<b>*fam29 sub-keys are:")
+document.write("*fam29 sub-keys are in sub-key value order: ")
 document.write('<ul>')
-document.write("<li>sub29*fam07 = 17 </li>")
-document.write("<li>sub29*fam11 = 19 </li>")
-document.write("<li>sub29*fam13 = 23 </li>")
+document.write("<li>sub29*fam29 =  1 </li>")
 document.write("<li>sub29*fam17 =  7 </li>")
 document.write("<li>sub29*fam19 = 11 </li>")
 document.write("<li>sub29*fam23 = 13 </li>")
-document.write("<li>sub29*fam29 =  1 </li>")
+document.write("<li>sub29*fam07 = 17 </li>")
+document.write("<li>sub29*fam11 = 19 </li>")
+document.write("<li>sub29*fam13 = 23 </li>")
+document.write("<li>sub29*fam01 = 29 </li>")
 document.write("</ul>")
 }
 
 
- document.write("<hr>")
+
+/* good to here 00 */
+console.log("/* good to here 00 */")
+/*var cnt01 = 0 */
 
 <!-- assign var for sub-keys and loop -->
+/********************************************************/
+/* sub-key and *fam combinations are unique sets  */
+
+if  (mod01 == 0 || PS-1==0)
+{
+var sub01fam01 =  1
+var sub01fam07 =  7
+var sub01fam11 = 11
+var sub01fam13 = 13
+var sub01fam17 = 17
+var sub01fam19 = 19
+var sub01fam23 = 23
+var sub01fam29 = 29
+console.log("sub01fam01 " + sub01fam01)
+console.log("sub01fam07 " + sub01fam07)
+console.log("sub01fam11 " + sub01fam11)
+console.log("sub01fam13 " + sub01fam13)
+console.log("sub01fam17 " + sub01fam17)
+console.log("sub01fam19 " + sub01fam19)
+console.log("sub01fam23 " + sub01fam23)
+console.log("sub01fam29 " + sub01fam29)
+}
+
 if  (mod07 == 0 || PS-7==0)
 {
-var sub07*fam07 =  1
-var sub07*fam11 = 17
-var sub07*fam13 = 19
-var sub07*fam17 = 11
-var sub07*fam19 = 13
-var sub07*fam23 = 29
-var sub07*fam29 = 23
+var sub07fam07 =  1
+var sub07fam01 =  7
+var sub07fam17 = 11
+var sub07fam19 = 13
+var sub07fam11 = 17
+var sub07fam13 = 19
+var sub07fam29 = 23
+var sub07fam23 = 29
+
+console.log("sub07fam07 = " + sub07fam07)
+console.log("sub07fam01 = " + sub07fam01)
+console.log("sub07fam17 = " + sub07fam17)
+console.log("sub07fam19 = " + sub07fam19)
+console.log("sub07fam11 = " + sub07fam11)
+console.log("sub07fam13 = " + sub07fam13)
+console.log("sub07fam29 = " + sub07fam29)
+console.log("sub07fam23 = " + sub07fam23)
 }
 
-
-if  (mod11 == 1 || PS-11==0)
+if  (mod11 == 0 || PS-11==0)
 {
-var sub11*fam07 = 23
-var sub11*fam11 =  1
-var sub11*fam13 = 17
-var sub11*fam17 = 13
-var sub11*fam19 = 29
-var sub11*fam23 =  7
-var sub11*fam29 = 19
-}
+var sub11fam11 =  1
+var sub11fam23 =  7
+var sub11fam01 = 11
+var sub11fam17 = 13
+var sub11fam13 = 17
+var sub11fam29 = 19
+var sub11fam07 = 23
+var sub11fam19 = 29
 
+console.log("sub11fam11 " + sub11fam11)
+console.log("sub11fam23 " + sub11fam23)
+console.log("sub11fam01 " + sub11fam01)
+console.log("sub11fam17 " + sub11fam17)
+console.log("sub11fam13 " + sub11fam13)
+console.log("sub11fam29 " + sub11fam29)
+console.log("sub11fam07 " + sub11fam07)
+console.log("sub11fam19 " + sub11fam19)
+}
 
 if  (mod13 == 0 || PS-13==0)
 {
-var sub13*fam07 = 19
-var sub13*fam11 = 23
-var sub13*fam13 =  1
-var sub13*fam17 = 29
-var sub13*fam19 =  7
-var sub13*fam23 = 11
-var sub13*fam29 = 17
-}
+var sub13fam13 =  1
+var sub13fam19 =  7
+var sub13fam23 = 11
+var sub13fam01 = 13
+var sub13fam29 = 17
+var sub13fam07 = 19
+var sub13fam11 = 23
+var sub13fam17 = 29
 
+console.log("sub13fam13 " + sub13fam13)
+console.log("sub13fam19 " + sub13fam19)
+console.log("sub13fam23 " + sub13fam23)
+console.log("sub13fam01 " + sub13fam01)
+console.log("sub13fam29 " + sub13fam29)
+console.log("sub13fam07 " + sub13fam07)
+console.log("sub13fam11 " + sub13fam11)
+console.log("sub13fam17 " + sub13fam17)
+}
 
 if  (mod17 == 0 || PS-17==0)
 {
-var sub17*fam07 = 11
-var sub17*fam11 =  7
-var sub17*fam13 = 29
-var sub17*fam17 =  1
-var sub17*fam19 = 23
-var sub17*fam23 = 19
-var sub17*fam29 = 13
-}
+var sub17fam17 =  1
+var sub17fam11 =  7
+var sub17fam07 = 11
+var sub17fam29 = 13
+var sub17fam01 = 17
+var sub17fam23 = 19
+var sub17fam19 = 23
+var sub17fam13 = 29
 
+console.log("sub17fam17 " + sub17fam17)
+console.log("sub17fam11 " + sub17fam11)
+console.log("sub17fam07 " + sub17fam07)
+console.log("sub17fam29 " + sub17fam29)
+console.log("sub17fam01 " + sub17fam01)
+console.log("sub17fam23 " + sub17fam23)
+console.log("sub17fam19 " + sub17fam19)
+console.log("sub17fam13 " + sub17fam13)
+}
 
 if  (mod19 == 0 || PS-19==0)
 {
-var sub19*fam07 =  7
-var sub19*fam11 = 29
-var sub19*fam13 = 13
-var sub19*fam17 = 17
-var sub19*fam19 =  1
-var sub19*fam23 = 23
-var sub19*fam29 = 11
-}
+var sub19fam19 =  1
+var sub19fam07 =  7
+var sub19fam29 = 11
+var sub19fam13 = 13
+var sub19fam17 = 17
+var sub19fam01 = 19
+var sub19fam23 = 23
+var sub19fam11 = 29
 
+console.log("sub19fam19 = " + sub19fam19)
+console.log("sub19fam07 = " + sub19fam07)
+console.log("sub19fam29 = " + sub19fam29)
+console.log("sub19fam13 = " + sub19fam13)
+console.log("sub19fam17 = " + sub19fam17)
+console.log("sub19fam01 = " + sub19fam01)
+console.log("sub19fam23 = " + sub19fam23)
+console.log("sub19fam11 = " + sub19fam11)
+}
 
 if  (mod23 == 0 || PS-23==0)
 {
-var sub23*fam07 = 29
-var sub23*fam11 = 13
-var sub23*fam13 = 11
-var sub23*fam17 = 19
-var sub23*fam19 = 17
-var sub23*fam23 =  1
-var sub23*fam29 =  7
+var sub23fam23 =  1
+var sub23fam29 =  7
+var sub23fam13 = 11
+var sub23fam11 = 13
+var sub23fam19 = 17
+var sub23fam17 = 19
+var sub23fam01 = 23
+var sub23fam07 = 29
+
+console.log("sub23fam23 = " + sub23fam23)
+console.log("sub23fam29 = " + sub23fam29)
+console.log("sub23fam13 = " + sub23fam13)
+console.log("sub23fam11 = " + sub23fam11)
+console.log("sub23fam19 = " + sub23fam19)
+console.log("sub23fam17 = " + sub23fam17)
+console.log("sub23fam01 = " + sub23fam01)
+console.log("sub23fam07 = " + sub23fam07)
 }
-
-
+/* p331 of tio cash pdf */
 if  (mod29 == 0 || PS-29==0)
 {
-var sub29*fam07 = 17
-var sub29*fam11 = 19
-var sub29*fam13 = 23
-var sub29*fam17 =  7
-var sub29*fam19 = 11
-var sub29*fam23 = 13
-var sub29*fam29 =  1
+var sub29fam29 =  1
+var sub29fam23 =  7
+var sub29fam19 = 11
+var sub29fam17 = 13
+var sub29fam13 = 17
+var sub29fam11 = 19
+var sub29fam07 = 23
+var sub29fam01 = 29
+
+console.log("sub29fam29 = " + sub29fam29)
+console.log("sub29fam23 = " + sub29fam23)
+console.log("sub29fam19 = " + sub29fam19)
+console.log("sub29fam17 = " + sub29fam17)
+console.log("sub29fam13 = " + sub29fam13)
+console.log("sub29fam11 = " + sub29fam11)
+console.log("sub29fam07 = " + sub29fam07)
+console.log("sub29fam01 = " + sub29fam01)
+}
+
+/* good to here 01 */
+console.log("/* good to here 01 */")
+var cnt01 = 0
+/****************************************************************************/
+/****************************************************************************/
+/***** the order of operations is important go lo to hi *************************/
+/******01*****good01********************************************************/
+/****************************************************************************/
+if  (mod01 == 0 || PS-1==0)
+{
+var     F4sub01fam01 =      ((PS / sub01fam01)).toFixed(2)
+var     F4sub01fam07 =      ((PS / sub01fam07)).toFixed(2)
+var     F4sub01fam17 =      ((PS / sub01fam17)).toFixed(2)
+var     F4sub01fam13 =      ((PS / sub01fam13)).toFixed(2)
+var     F4sub01fam17 =      ((PS / sub01fam17)).toFixed(2)
+var     F4sub01fam19 =      ((PS / sub01fam19)).toFixed(2)
+var     F4sub01fam23 =      ((PS / sub01fam23)).toFixed(2)
+var     F4sub01fam29 =      ((PS / sub01fam29)).toFixed(2)
+
+/* var just30 = 'just another 30 away */
+var just30 = 0
+
+ for (let i = 0 ; i <= PSL ;  i++)
+{
+
+/* if ( (( PS / sub01fam01) % 1 ) ) */
+{
+console.log("/* good to here 01 top */")
+sub01fam01 = sub01fam01 + just30
+
+cnt01 = cnt01 + 1
+if  ((( PS / sub01fam01) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub01fam01 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub01fam01 + "<br>" )
 }
 
 
+}
+/* if ( (( PS / sub01fam07) % 1 ) ) */
+{
+sub01fam07 = sub01fam07 + just30
+cnt01 = cnt01 + 1
+if  ((( PS / sub01fam07) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = factorTRUE + " " + sub01fam07 + " , "
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub01fam07 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub01fam11) % 1 ) ) */
+{
+sub01fam11 = sub01fam11 + just30
+cnt01 = cnt01 + 1
+if  ((( PS / sub01fam11) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = factorTRUE + " " + sub01fam11 + " , "
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub01fam11 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub01fam13) % 1 ) ) */
+{
+sub01fam13 = sub01fam13 + just30
+cnt01 = cnt01 + 1
+if  ((( PS / sub01fam13) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = factorTRUE + " " + sub01fam13 + " , "
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub01fam13 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub01fam17) % 1 ) ) */
+{
+sub01fam17 = sub01fam17 + just30
+cnt01 = cnt01 + 1
+if  ((( PS / sub01fam17) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = factorTRUE + " " + sub01fam17 + " , "
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub01fam17 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub01fam19) % 1 ) ) */
+{
+sub01fam19 = sub01fam19 + just30
+cnt01 = cnt01 + 1
+if  ((( PS / sub01fam19) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = factorTRUE + " " + sub01fam19 + " , "
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub01fam19 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub01fam23) % 1 ) ) */
+{
+sub01fam23 = sub01fam23 + just30
+cnt01 = cnt01 + 1
+if  ((( PS / sub01fam23) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = factorTRUE + " " + sub01fam23 + " , "
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub01fam23 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub01fam29) % 1 ) ) */
+{
+sub01fam29 = sub01fam29 + just30
+cnt01 = cnt01 + 1
+if  ((( PS / sub01fam29) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = factorTRUE + " " + sub01fam29 + " , "
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub01fam29 + "<br>" )
+}
+
+}
+just30 =  30
+
+}
+}
+/**********/
+
+/* good to here 07 */
+console.log("/* good to here 07 */")
+var cnt07 = 0
+/****************************************************************************/
+/****************************************************************************/
+/***** the order of operations is important go lo to hi *************************/
+/******07*****good07********************************************************/
+/****************************************************************************/
+if  (mod07 == 0 || PS-7==0)
+{
+var     F4sub07fam07 =      ((PS / sub07fam07)).toFixed(2)
+var     F4sub07fam01 =      ((PS / sub07fam01)).toFixed(2)
+var     F4sub07fam17 =      ((PS / sub07fam17)).toFixed(2)
+var     F4sub07fam19 =      ((PS / sub07fam19)).toFixed(2)
+var     F4sub07fam11 =      ((PS / sub07fam11)).toFixed(2)
+var     F4sub07fam13 =      ((PS / sub07fam13)).toFixed(2)
+var     F4sub07fam29 =      ((PS / sub07fam29)).toFixed(2)
+var     F4sub07fam23 =      ((PS / sub07fam23)).toFixed(2)
+
+/* var just30 = 'just another 30 away */
+var just30 = 0
+
+ for (let i = 0 ; i <= PSL ;  i++)
+{
+
+/* if ( (( PS / sub07fam07) % 1 ) ) */
+{
+sub07fam07 = sub07fam07 + just30
+cnt07 = cnt07 + 1
+if  ((( PS / sub07fam07) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub07fam07 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub07fam07 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub07fam01) % 1 ) ) */
+{
+sub07fam01 = sub07fam01 + just30
+cnt07 = cnt07 + 1
+if  ((( PS / sub07fam01) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub07fam01 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub07fam01 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub07fam17) % 1 ) ) */
+{
+sub07fam17 = sub07fam17 + just30
+cnt07 = cnt07 + 1
+if  ((( PS / sub07fam17) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub07fam17 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub07fam17 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub07fam19) % 1 ) ) */
+{
+sub07fam19 = sub07fam19 + just30
+cnt07 = cnt07 + 1
+if  ((( PS / sub07fam19) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub07fam19 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub07fam19 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub07fam11) % 1 ) ) */
+{
+sub07fam11 = sub07fam11 + just30
+cnt07 = cnt07 + 1
+if  ((( PS / sub07fam11) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub07fam11 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub07fam11 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub07fam13) % 1 ) ) */
+{
+sub07fam13 = sub07fam13 + just30
+cnt07 = cnt07 + 1
+if  ((( PS / sub07fam13) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub07fam13 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub07fam13 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub07fam29) % 1 ) ) */
+{
+sub07fam29 = sub07fam29 + just30
+cnt07 = cnt07 + 1
+if  ((( PS / sub07fam29) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub07fam29 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub07fam29 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub07fam23) % 1 ) ) */
+{
+sub07fam23 = sub07fam23 + just30
+cnt07 = cnt07 + 1
+if  ((( PS / sub07fam23) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub07fam23 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub07fam23 + "<br>" )
+}
+
+}
+just30 =  30
+}
+}
+/**********/
+
+/* good to here 11 */
+console.log("/* good to here 11 */")
+var cnt11 = 0
+/****************************************************************************/
+/****************************************************************************/
+/***** the order of operations is important go lo to hi *************************/
+/******11**********good11*********************************************************/
+/****************************************************************************/
+if  (mod11 == 0 || PS-11==0)
+{
+var     F4sub11fam11 =      ((PS / sub11fam11)).toFixed(2)
+var     F4sub11fam23 =      ((PS / sub11fam23)).toFixed(2)
+var     F4sub11fam01 =      ((PS / sub11fam01)).toFixed(2)
+var     F4sub11fam17 =      ((PS / sub11fam17)).toFixed(2)
+var     F4sub11fam13 =      ((PS / sub11fam13)).toFixed(2)
+var     F4sub11fam29 =      ((PS / sub11fam29)).toFixed(2)
+var     F4sub11fam07 =      ((PS / sub11fam07)).toFixed(2)
+var     F4sub11fam19 =      ((PS / sub11fam19)).toFixed(2)
+
+/* var just30 = 'just another 30 away */
+var just30 = 0
+
+
+ for (let i = 0 ; i <= PSL ;  i++)
+{
+
+/* if ( (( PS / sub11fam11) % 1 ) ) */
+{
+sub11fam11 = sub11fam11 + just30
+cnt11 = cnt11 + 1
+if  ((( PS / sub11fam11) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub11fam11 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub11fam11 + "<br>" )
+}
+
+}
+
+
+/* if ( (( PS / sub11fam23) % 1 ) ) */
+{
+sub11fam23 = sub11fam23 + just30
+cnt11 = cnt11 + 1
+if  ((( PS / sub11fam23) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub11fam23 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub11fam23 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub11fam01) % 1 ) ) */
+{
+sub11fam01 = sub11fam01 + just30
+cnt11 = cnt11 + 1
+if  ((( PS / sub11fam01) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub11fam01 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub11fam01 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub11fam17) % 1 ) ) */
+{
+sub11fam17 = sub11fam17 + just30
+cnt11 = cnt11 + 1
+if  ((( PS / sub11fam17) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub11fam17 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub11fam17 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub11fam13) % 1 ) ) */
+{
+sub11fam13 = sub11fam13 + just30
+cnt11 = cnt11 + 1
+if  ((( PS / sub11fam13) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub11fam13 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub11fam13 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub11fam29) % 1 ) ) */
+{
+sub11fam29 = sub11fam29 + just30
+cnt11 = cnt11 + 1
+if  ((( PS / sub11fam29) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub11fam29 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub11fam29 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub11fam07) % 1 ) ) */
+{
+sub11fam07 = sub11fam07 + just30
+cnt11 = cnt11 + 1
+if  ((( PS / sub11fam07) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub11fam07 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub11fam07 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub11fam19) % 1 ) ) */
+{
+sub11fam19 = sub11fam19 + just30
+cnt11 = cnt11 + 1
+if  ((( PS / sub11fam19) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub11fam19 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub11fam19 + "<br>" )
+}
+
+}
+just30 =  30
+}
+}
+/**********/
+
+/* good to here 13 */
+console.log("/* good to here 13 */")
+var cnt13 = 0
+/****************************************************************************/
+/******************good13****************************************************/
+/***** the order of operations is important go lo to hi *************************/
+/******13*********3703******193****here***********************************/
+/****************************************************************************/
+if  (mod13 == 0 || PS-13==0)
+{
+var     F4sub13fam13 =      ((PS / sub13fam13)).toFixed(2)
+var     F4sub13fam19 =      ((PS / sub13fam19)).toFixed(2)
+var     F4sub13fam23 =      ((PS / sub13fam23)).toFixed(2)
+var     F4sub13fam01 =      ((PS / sub13fam01)).toFixed(2)
+var     F4sub13fam29 =      ((PS / sub13fam29)).toFixed(2)
+var     F4sub13fam07 =      ((PS / sub13fam07)).toFixed(2)
+var     F4sub13fam11 =      ((PS / sub13fam11)).toFixed(2)
+var     F4sub13fam17 =      ((PS / sub13fam17)).toFixed(2)
+
+/* var just30 = 'just another 30 away */
+var just30 = 0
+
+ for (let i = 0 ; i <= PSL ;  i++)
+{
+
+
+/* if ( (( PS / sub13fam13) % 1 ) ) */
+{
+sub13fam13 = sub13fam13 + just30
+cnt13 = cnt13 + 1
+if  ((( PS / sub13fam13) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub13fam13 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub13fam13 + "<br>" )
+}
+
+}
+
+/* if ( (( PS / sub13fam19) % 1 ) ) */
+{
+sub13fam19 = sub13fam19 + just30
+cnt13 = cnt13 + 1
+if  ((( PS / sub13fam19) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub13fam19 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub13fam19 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub13fam23) % 1 ) ) */
+{
+sub13fam23 = sub13fam23 + just30
+cnt13 = cnt13 + 1
+if  ((( PS / sub13fam23) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub13fam23 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub13fam23 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub13fam01) % 1 ) ) */
+{
+sub13fam01 = sub13fam01 + just30
+cnt13 = cnt13 + 1
+if  ((( PS / sub13fam01) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub13fam01 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub13fam01 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub13fam29) % 1 ) ) */
+{
+sub13fam29 = sub13fam29 + just30
+cnt13 = cnt13 + 1
+if  ((( PS / sub13fam29) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub13fam29 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub13fam29 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub13fam07) % 1 ) ) */
+{
+sub13fam07 = sub13fam07 + just30
+cnt13 = cnt13 + 1
+if  ((( PS / sub13fam07) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub13fam07 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub13fam07 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub13fam11) % 1 ) ) */
+{
+sub13fam11 = sub13fam11 + just30
+cnt13 = cnt13 + 1
+if  ((( PS / sub13fam11) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub13fam11 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub13fam11 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub13fam17) % 1 ) ) */
+{
+sub13fam17 = sub13fam17 + just30
+cnt13 = cnt13 + 1
+if  ((( PS / sub13fam17) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub13fam17 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub13fam17 + "<br>" )
+}
+
+}
+just30 =  30
+}
+}
+/**********/
+
+/* good to here 17 */
+console.log("/* good to here 17 */")
+var cnt17 = 0
+/****************************************************************************/
+/****************************************************************************/
+/***** the order of operations is important go lo to hi *************************/
+/******17***********good17***************************************************/
+/****************************************************************************/
+if  (mod17 == 0 || PS-17==0)
+{
+var     F4sub17fam17 =      ((PS / sub17fam17)).toFixed(2)
+var     F4sub17fam11 =      ((PS / sub17fam11)).toFixed(2)
+var     F4sub17fam07 =      ((PS / sub17fam07)).toFixed(2)
+var     F4sub17fam29 =      ((PS / sub17fam29)).toFixed(2)
+var     F4sub17fam01 =      ((PS / sub17fam01)).toFixed(2)
+var     F4sub17fam23 =      ((PS / sub17fam23)).toFixed(2)
+var     F4sub17fam19 =      ((PS / sub17fam19)).toFixed(2)
+var     F4sub17fam13 =      ((PS / sub17fam13)).toFixed(2)
+
+/* var just30 = 'just another 30 away */
+var just30 = 0
+
+for (let i = 0 ; i <= PSL ;  i++)
+{
+
+/* if ( (( PS / sub17fam17) % 1 ) ) */
+{
+sub17fam17 = sub17fam17 + just30
+cnt17 = cnt17 + 1
+if  ((( PS / sub17fam17) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub17fam17 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub17fam17 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub17fam11) % 1 ) ) */
+{
+sub17fam11 = sub17fam11 + just30
+cnt17 = cnt17 + 1
+if  ((( PS / sub17fam11) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub17fam11 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub17fam11 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub17fam07) % 1 ) ) */
+{
+sub17fam07 = sub17fam07 + just30
+cnt17 = cnt17 + 1
+if  ((( PS / sub17fam07) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub17fam07 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub17fam07 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub17fam29) % 1 ) ) */
+{
+sub17fam29 = sub17fam29 + just30
+cnt17 = cnt17 + 1
+if  ((( PS / sub17fam29) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub17fam29 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub17fam29 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub17fam01) % 1 ) ) */
+{
+sub17fam01 = sub17fam01 + just30
+cnt17 = cnt17 + 1
+if  ((( PS / sub17fam01) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub17fam01 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub17fam01 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub17fam23) % 1 ) ) */
+{
+sub17fam23 = sub17fam23 + just30
+cnt17 = cnt17 + 1
+if  ((( PS / sub17fam23) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub17fam23 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub17fam23 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub17fam19) % 1 ) ) */
+{
+sub17fam19 = sub17fam19 + just30
+cnt17 = cnt17 + 1
+if  ((( PS / sub17fam19) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub17fam19 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub17fam19 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub17fam13) % 1 ) ) */
+{
+sub17fam13 = sub17fam13 + just30
+cnt17 = cnt17 + 1
+if  ((( PS / sub17fam13) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub17fam13 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub17fam13 + "<br>" )
+}
+
+}
+just30 =  30
+}
+}
+/**********/
+
+/* good to here 19 */
+console.log("/* good to here 19 */")
+var cnt19 = 0
+/****************************************************************************/
+/****************************************************************************/
+/***** the order of operations is important go lo to hi *************************/
+/******19**********good19*********************************************************/
+/****************************************************************************/
+if  (mod19 == 0 || PS-19==0)
+{
+var     F4sub19fam19 =      ((PS / sub19fam19)).toFixed(2)
+var     F4sub19fam07 =      ((PS / sub19fam07)).toFixed(2)
+var     F4sub19fam29 =      ((PS / sub19fam29)).toFixed(2)
+var     F4sub19fam13 =      ((PS / sub19fam13)).toFixed(2)
+var     F4sub19fam17 =      ((PS / sub19fam17)).toFixed(2)
+var     F4sub19fam01 =      ((PS / sub19fam01)).toFixed(2)
+var     F4sub19fam23 =      ((PS / sub19fam23)).toFixed(2)
+var     F4sub19fam11 =      ((PS / sub19fam11)).toFixed(2)
+
+/* var just30 = 'just another 30 away */
+var just30 = 0
+
+for (let i = 0 ; i <= PSL ;  i++)
+{
+
+/* if ( (( PS / sub19fam07) % 1 ) ) */
+{
+sub19fam19 = sub19fam19 + just30
+cnt19 = cnt19 + 1
+if  ((( PS / sub19fam19) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub19fam19 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub19fam19 + "<br>" )
+}
+
+}
+
+/* if ( (( PS / sub19fam07) % 1 ) ) */
+{
+sub19fam07 = sub19fam07 + just30
+cnt19 = cnt19 + 1
+if  ((( PS / sub19fam07) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub19fam07 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub19fam07 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub19fam29) % 1 ) ) */
+{
+sub19fam29 = sub19fam29 + just30
+cnt19 = cnt19 + 1
+if  ((( PS / sub19fam29) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub19fam29 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub19fam29 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub19fam13) % 1 ) ) */
+{
+sub19fam13 = sub19fam13 + just30
+cnt19 = cnt19 + 1
+if  ((( PS / sub19fam13) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub19fam13 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub19fam13 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub19fam17) % 1 ) ) */
+{
+sub19fam17 = sub19fam17 + just30
+cnt19 = cnt19 + 1
+if  ((( PS / sub19fam17) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub19fam17 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub19fam17 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub19fam01) % 1 ) ) */
+{
+sub19fam01 = sub19fam01 + just30
+cnt19 = cnt19 + 1
+if  ((( PS / sub19fam01) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub19fam01 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub19fam01 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub19fam23) % 1 ) ) */
+{
+sub19fam23 = sub19fam23 + just30
+cnt19 = cnt19 + 1
+if  ((( PS / sub19fam23) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub19fam23 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub19fam23 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub19fam11) % 1 ) ) */
+{
+sub19fam11 = sub19fam11 + just30
+cnt19 = cnt19 + 1
+if  ((( PS / sub19fam11) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub19fam11 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub19fam11 + "<br>" )
+}
+
+}
+just30 =  30
+
+}
+}
+/**********/
+
+/* good to here 23 */
+console.log("/* good to here 23 */")
+var cnt23 = 0
+/****************************************************************************/
+/****************************************************************************/
+/***** the order of operations is important go lo to hi *************************/
+/******23***************good23****************************************************/
+/****************************************************************************/
+if  (mod23 == 0 || PS-23==0)
+{
+var     F4sub23fam23 =      ((PS / sub23fam23)).toFixed(2)
+var     F4sub23fam29 =      ((PS / sub23fam29)).toFixed(2)
+var     F4sub23fam13 =      ((PS / sub23fam13)).toFixed(2)
+var     F4sub23fam11 =      ((PS / sub23fam11)).toFixed(2)
+var     F4sub23fam19 =      ((PS / sub23fam19)).toFixed(2)
+var     F4sub23fam17 =      ((PS / sub23fam17)).toFixed(2)
+var     F4sub23fam01 =      ((PS / sub23fam01)).toFixed(2)
+var     F4sub23fam07 =      ((PS / sub23fam07)).toFixed(2)
+
+/* var just30 = 'just another 30 away */
+var just30 = 0
+
+for (let i = 0 ; i <= PSL ;  i++)
+{
+
+/* if ( (( PS / sub23fam23) % 1 ) ) */
+{
+sub23fam23 = sub23fam23 + just30
+cnt23 = cnt23 + 1
+if  ((( PS / sub23fam23) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub23fam23 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub23fam23 + "<br>" )
+}
+
+}
+
+/* if ( (( PS / sub23fam29) % 1 ) ) */
+{
+sub23fam29 = sub23fam29 + just30
+cnt23 = cnt23 + 1
+if  ((( PS / sub23fam29) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub23fam29 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub23fam29 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub23fam13) % 1 ) ) */
+{
+sub23fam13 = sub23fam13 + just30
+cnt23 = cnt23 + 1
+if  ((( PS / sub23fam13) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub23fam13 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub23fam13 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub23fam11) % 1 ) ) */
+{
+sub23fam11 = sub23fam11 + just30
+cnt23 = cnt23 + 1
+if  ((( PS / sub23fam11) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub23fam11 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub23fam11 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub23fam19) % 1 ) ) */
+{
+sub23fam19 = sub23fam19 + just30
+cnt23 = cnt23 + 1
+if  ((( PS / sub23fam19) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub23fam19 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub23fam19 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub23fam17) % 1 ) ) */
+{
+sub23fam17 = sub23fam17 + just30
+cnt23 = cnt23 + 1
+if  ((( PS / sub23fam17) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub23fam17 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub23fam17 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub23fam01) % 1 ) ) */
+{
+sub23fam01 = sub23fam01 + just30
+cnt23 = cnt23 + 1
+if  ((( PS / sub23fam01) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub23fam01 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub23fam01 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub23fam07) % 1 ) ) */
+{
+sub23fam07 = sub23fam07 + just30
+cnt23 = cnt23 + 1
+if  ((( PS / sub23fam07) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub23fam07 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub23fam07 + "<br>" )
+}
+
+}
+just30 =  30
+}
+}
+
+/**********/
 
 
 
+/* good to here 29 */
+console.log("/* good to here 29 */")
+var cnt29 = 0
+/****************************************************************************/
+/****************************************************************************/
+/***** the order of operations is important go lo to hi *************************/
+/******29**************good29*****************************************************/
+/****************************************************************************/
+if  (mod29 == 0 || PS-29==0)
+{
+var     F4sub29fam29 =      ((PS / sub29fam29)).toFixed(2)
+var     F4sub29fam23 =      ((PS / sub29fam23)).toFixed(2)
+var     F4sub29fam19 =      ((PS / sub29fam19)).toFixed(2)
+var     F4sub29fam17 =      ((PS / sub29fam17)).toFixed(2)
+var     F4sub29fam13 =      ((PS / sub29fam13)).toFixed(2)
+var     F4sub29fam11 =      ((PS / sub29fam11)).toFixed(2)
+var     F4sub29fam07 =      ((PS / sub29fam07)).toFixed(2)
+var     F4sub29fam01 =      ((PS / sub29fam01)).toFixed(2)
+
+/* var just30 = 'just another 30 away */
+var just30 = 0
+
+for (let i = 0 ; i <= PSL ;  i++)
+{
+
+/* if ( (( PS / sub29fam29) % 1 ) ) */
+{
+sub29fam29 = sub29fam29 + just30
+cnt29 = cnt29 + 1
+if  ((( PS / sub29fam29) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub29fam29 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub29fam29 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub29fam23) % 1 ) ) */
+{
+sub29fam23 = sub29fam23 + just30
+cnt29 = cnt29 + 1
+if  ((( PS / sub29fam23) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub29fam23 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub29fam23 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub29fam19) % 1 ) ) */
+{
+sub29fam19 = sub29fam19 + just30
+cnt29 = cnt29 + 1
+if  ((( PS / sub29fam19) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub29fam19 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub29fam19 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub29fam17) % 1 ) ) */
+{
+sub29fam17 = sub29fam17 + just30
+cnt29 = cnt29 + 1
+if  ((( PS / sub29fam17) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub29fam17 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub29fam17 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub29fam13) % 1 ) ) */
+{
+sub29fam13 = sub29fam13 + just30
+cnt29 = cnt29 + 1
+if  ((( PS / sub29fam13) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub29fam13 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub29fam13 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub29fam11) % 1 ) ) */
+{
+sub29fam11 = sub29fam11 + just30
+cnt29 = cnt29 + 1
+if  ((( PS / sub29fam11) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub29fam11 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub29fam11 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub29fam07) % 1 ) ) */
+{
+sub29fam07 = sub29fam07 + just30
+cnt29 = cnt29 + 1
+
+if  ((( PS / sub29fam07) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub29fam07 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub29fam07 + "<br>" )
+}
+
+}
+/* if ( (( PS / sub29fam01) % 1 ) ) */
+{
+sub29fam01 = sub29fam01 + just30
+cnt29 = cnt29 + 1
+if  ((( PS / sub29fam01) % 1 ) == 0 )
+{
+cntTRUE = cntTRUE + 1
+factorTRUE = (factorTRUE + " " + sub29fam01 +  " , ");
+document.write( "<br> factor number " + cntTRUE + "  found is : " +  sub29fam01 + "<br>" )
+}
+
+}
+just30 =  30
+
+}
+}
+
+/**********/
+
+
+if (nonprimeflag == "FALSE")
+{
+document.write("<hr> Number of  factors are : " + cntTRUE)
+document.write("<br> All factors are : " + factorTRUE)
+document.write("<hr>")
+}
+
+
+/*  https://forums.caspio.com/topic/7539-replace-documentwrite-with-innerhtml/  */
+/* {
+document.write("<div style='background:#A0CE4E;border:1px solid #000000;padding:5px 10px;'><span style='font-size:16px;'><strong><a href='https://saveplants.org/national-collection/plant-search/plant-profile/?CPCNum=[@field:tblRareTaxonTable_CPCNumber]' <span style='color:#482441;'>Go To Profile</span></a></strong></span></div>");
+}   */
+
+if (nonprimeflag == "FALSE")
+{
+if (cntTRUE <= 2)
+{
+document.write("<hr>")
+document.write("<div style='background:#A0CE4E;><span style='font-size:16px;'><strong>"+ PS +" is a prime number</strong></span></div>");
+document.write("<div style='background:#A0CE4E;><span style='font-size:16px;'><strong>Number of  factors are : " + cntTRUE + "</strong></span></div>");
+document.write("<div style='background:#A0CE4E;><span style='font-size:16px;'><strong>" + factorTRUE + "</strong></span></div>");
+}
+}
+
+if (nonprimeflag == "TRUE" || cntTRUE > 2)
+{
+if (cntTRUE != 0)
+{
+document.write("<hr>")
+document.write("<div style='background:#CD5C5C;><span style='font-size:16px;'><strong>"+ PS +" is a non-prime number</strong></span></div>");
+document.write("<div style='background:#CD5C5C;><span style='font-size:16px;'><strong>Number of  factors are : " + cntTRUE + "</strong></span></div>");
+document.write("<div style='background:#CD5C5C;><span style='font-size:16px;'><strong>" + factorTRUE + "</strong></span></div>");
+}
+}
+/* break; */
+/* throw  ""*/
 
 
 
-
-
-
-                                    
- 
- 
 <!-- end function -->
 }
- </script>
- 
 
-                       </div><!-- /.container -->
-                        <footer>
-                    
-                        </footer>
-                </body>
-        </html>
+
+ </script>
+
+
+<!-- ##################### -->	
+</div><!-- /.blurb -->
