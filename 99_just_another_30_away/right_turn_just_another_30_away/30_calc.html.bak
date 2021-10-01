@@ -29,6 +29,10 @@ layout: default
 
  /*fx - magic*/
 function calculate(){
+
+document.getElementById('calc').focus();
+document.getElementById('calc').select();
+
     document.getElementById('result')
   .innerText=eval(document.getElementById('calc').value);
 
@@ -46,7 +50,7 @@ var cntTRUE = 0
   
  
 /*document.write("<br>"); */
-document.write("Prime Suspect (PS) is: " + PS + "<br>");
+document.write("Prime Suspect (PS) is: " + PS);
 document.write("&nbsp;&nbsp;&nbsp;");
 document.write("<a href='https://cashfields.github.io/TioCash/99_just_another_30_away/right_turn_just_another_30_away/30_calc.html' style='background-color:#A0CE4E'>reload page</a>");
 

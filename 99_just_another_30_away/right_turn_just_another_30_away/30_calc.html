@@ -13,7 +13,7 @@ layout: default
 <br> Enter a number and press the 'calculate' button.
 <br>
 <br>
- <input id="calc"  />
+ <input id="calc" autofocus="autofocus"  />
  <button onclick="calculate()">calculate</button>
  <div id="result"></div>
 
@@ -29,6 +29,11 @@ layout: default
 
  /*fx - magic*/
 function calculate(){
+
+
+document.getElementById('calc').focus();
+document.getElementById('calc').select();
+
     document.getElementById('result')
   .innerText=eval(document.getElementById('calc').value);
 
