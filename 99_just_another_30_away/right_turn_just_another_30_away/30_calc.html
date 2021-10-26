@@ -68,12 +68,7 @@ var lastDigit = +(lastChar); //convert last character to number
 document.write("<br>*wildcard is:  " + lastDigit );
 document.write("<br>")
 
-/*
-var PSsqroot = Math.sqrt(PS).toFixed(2);
-document.write("<br> square root is: " + PSsqroot + "<br>");
-var PSsquare = PS * PS;
-document.write("<br> PS Squared is: " + PSsquare + "<br>");
-*/
+ 
 
 /* sort off 2 , 3 , 5 , all even */
 if ( PS == 2 || PS == 3 || PS == 5)
@@ -248,9 +243,23 @@ document.write("<br><br>"+ "Non-Prime Suspect Level (PSL) is: " + fam09 );
 nonprimeflag = "TRUE"
 }
 }
+/***********************************************************/
+/* get try and limit calc's */
+/***********************************************************/
+document.write("<hr>");
+/*
+var PSsqroot = Math.sqrt(PS).toFixed(2);
+document.write("<br> square root is: " + PSsqroot + "<br>");
+*/
+var PSsquare = PS * PS;
+document.write("PS Squared is: " + PSsquare + "<br>");
+var PS_sq_ratio = PSsquare * 0.142859;
+ document.write("<br> PS_sq_ratio is: " + PS_sq_ratio + "<br>");
+ var PStry = [Math.floor(PS_sq_ratio / PS ) + 1];
+ var PSlimit = PS * PStry 
+ document.write("<br> 'try' is: " + PStry + " , and the 'limit' is: " + PSlimit + "<br>");
 
 document.write("<hr>");
-
 
   if  (mod01 == 0 || PS-1==0)
 {
