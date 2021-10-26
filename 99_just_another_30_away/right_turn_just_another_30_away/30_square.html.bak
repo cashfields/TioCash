@@ -785,7 +785,7 @@ is a quick reference for the fall thru table
 <br>  Add 'just another 30 away' until
 <br>         a) a factor is found
 <br>         or
-<br>         b) the limit of 1/7 of PS is reached [0.142859 * PS] ; if no factor is found within the number of 'try'
+<br>         b) the square of PS is reached
 <br>
 <br>  If a factor is found = non-prime
 <br>
