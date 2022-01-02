@@ -1,6 +1,0 @@
-\select@language {english}
-\contentsline {section}{Acknowledgement}{1}{section*.1}
-\contentsline {section}{Contents}{1}{chapter*.2}
-\contentsline {section}{\numberline {0.1}Introduction}{1}{section.0.1}
-\contentsline {section}{\numberline {0.2}Methods}{2}{section.0.2}
-\contentsline {section}{\numberline {0.3}Results}{3}{section.0.3}
