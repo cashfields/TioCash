@@ -1,0 +1,31 @@
+Function tryany(innumber As Long)
+'MsgBox ("Start tryany")
+
+Dim i As Long
+Dim x As Long
+Dim y As Long
+Dim k As Long
+Dim fam01 As Long
+Dim try01 As Long
+
+x = 0
+
+
+For i = 2 To innumber
+
+If (fam01 Mod i) = 0 Then
+x = x + 1
+'MsgBox ("in mod" & x & " mod value " & (innumber Mod i))
+End If
+
+Next i
+
+If x > 0 Then
+outmsg = "Non-prime"
+Else
+outmsg = "Prime"
+End If
+
+tryany = outmsg
+
+End Function

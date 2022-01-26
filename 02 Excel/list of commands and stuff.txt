@@ -1,0 +1,46 @@
+ https://www.youtube.com/watch?v=fWJiGOZixjE&ab_channel=NataliaLeigh
+
+
+
+
+p70
+
+
+=MID(CELL("filename",A1),FIND("]",CELL("filename",A1))+1,255)
+
+col width =15
+row height =38
+
+=CELL("filename",B1)
+
+
+
+
+
+=MID(CELL("filename",A1),FIND("]",CELL("filename",A1))+1,255)
+
+=MID(CELL("filename"),SEARCH("[",CELL("filename"))+1,SEARCH(".",CELL("filename"))-1-SEARCH("[",CELL("filename")))
+
+
+
+######### make *fam ##########
+
+=IF(MOD($C5-1,30)=0,"*fam01",IF(MOD($C5-7,30)=0,"*fam07",IF(MOD($C5-11,30)=0,"*fam11",IF(MOD($C5-13,30)=0,"*fam13",IF(MOD($C5-17,30)=0,"*fam17",IF(MOD($C5-19,30)=0,"*fam19",IF(MOD($C5-23,30)=0,"*fam23",IF(MOD($C5-29,30)=0,"*fam29",""))))))))
+
+=IF(MOD($C5-1,30)=0,$E5,=IF(MOD($C5-7,30)=0,$E5,""))
+
+=IF(MOD($C5-1,30)=0,$E5,"")
+
+=IF(MOD($C5-7,30)=0,$E5,"")
+
+=IF(MOD($C5-11,30)=0,"*fam11","")
+
+=IF(MOD($C5-13,30)=0,"*fam13","")
+
+=IF(MOD($C5-17,30)=0,"*fam17","")
+
+=IF(MOD($C5-19,30)=0,"*fam19","")
+
+=IF(MOD($C5-23,30)=0,"*fam23","")
+
+=IF(MOD($C5-29,30)=0,"*fam29","")
