@@ -52,7 +52,7 @@ layout: default
 <!-- ##################### -->	
 <br>
 <br>
-<br> The formulas to find a PS (Prime Suspect) and test for prime is below.
+<br> The formulas to find a PS (<u>P</u>rime <u>S</u>uspect) and test for prime is below.
 <br>
 <br>    [(2n + 1) * 15] &nbsp – 14 = &nbsp *fam01
 <br>    [(2n + 1) * 15] &nbsp – &nbsp 8   = &nbsp *fam07
@@ -65,18 +65,11 @@ layout: default
 <br>    where n = 0 &nbsp,&nbsp 1 &nbsp,&nbsp 2 &nbsp,&nbsp 3 &nbsp,&nbsp . &nbsp . &nbsp . &nbsp,&nbsp K &nbsp,&nbsp K &nbsp + &nbsp 1 &nbsp ; &nbsp also valid for negative n.
 <br>  and if try = [int(PS / 7) + 1] finds no factors , then prime.
 <br>
-<br>
-<br>
-
 <!--Tio Cash Prime Master Final.pdf-->
 <br> Read the whole journey to find prime numbers here: &nbsp  <a href="https://cashfields.github.io/TioCash/10_PDF/Tio Cash Prime Master Final.pdf">Tio Cash Prime Master Final.pdf</a>
 <br>
 <br>The supporting EXCEL files are located here: &nbsp <a href="https://github.com/cashfields/TioCash/tree/main/02_Excel/" target="_blank">EXCEL files</a>
-<!--<a href="https://github.com/cashfields/tiocash" target="_blank">TioCash Project</a>-->
-<!-- https://github.com/cashfields/tiocash -->
-<!-- https://github.com/cashfields/tiocash/02%20Excel/ ->>
-<!- https://github.com/cashfields/TioCash/tree/main/02_Excel -->
-
-<!--"https://github.com/cashfields/TioCash/tree/main/20_EXCEL"->
+<br>
+<br>
 
 </div><!-- /.blurb -->
