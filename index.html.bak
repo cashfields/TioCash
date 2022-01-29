@@ -10,19 +10,23 @@ layout: default
 <br>     There is a regular pattern to prime numbers. 
 <br>     After using color and multiple sorting techniques , there is a simple set formulas that groups prime numbers into families.
 <br>     There is a set distance from one prime to the next with in a family.
-<br>     There is symmetry ; groups ; pairs ; methods ; merdians ; polar ; and a fixed distance between prime numbers.
+<br>     There is symmetry ; groups ; pairs ; methods ; merdians ; poles; and a fixed distance between prime numbers.
 <br>     Prime numbers live on a long chain of eight unique formulas (families).
 <br>
+<!--
 <br>     Inside these web pages is the supporting data.
 <br>     Start at "/00_The_Origin/ - orginal XLS"  to see the begining.
 <br>     Look at the final page "/99_just_another_30_away/ - 30 - the solution" for the solution.
 <br>
 <br>     In between are XLS files , and gnu plot files. Look in the gif and r plot pages for graphs.
 <br>
+-->
 <br>     'just another 30 away' is the culmination of TioCash.
 <br>     It is the solution.
 <br> FX	
 	
+	
+<!--	
 <hr>
 <h5> /00_The_Origin/ - orginal XLS</h5> - <a href="https://cashfields.github.io/TioCash/00_The_Origin/readme.html"> start here - readme.html</a>
 <hr>
@@ -42,9 +46,32 @@ layout: default
 <hr>            
 <h5> /60_r_plots/ - r plots</h5> - <a href="https://cashfields.github.io/TioCash/60_r_plots/readme.html">readme.html</a>
 <hr>            
-<h5> /80_Latex/ - r plots</h5> - <a href="https://cashfields.github.io/TioCash/80_Latex/readme.html">readme.html</a>
-<hr>
 <h5> /99_just_another_30_away/ - 30 - the solution</h5> - <a href="https://cashfields.github.io/TioCash/99_just_another_30_away/readme.html">readme.html</a>
 <hr>
+-->
 <!-- ##################### -->	
+<br>
+<br>
+<br> The formulas to find a PS (Prime Suspect) and test for prime is below.
+<br>
+<br>    [(2n + 1) * 3 * 5] &nbsp – 14 = &nbsp *fam01
+<br>    [(2n + 1) * 3 * 5] &nbsp – &nbsp 8   = &nbsp *fam07
+<br>    [(2n + 1) * 3 * 5] &nbsp – &nbsp 4  = &nbsp *fam11
+<br>    [(2n + 1) * 3 * 5] &nbsp – &nbsp 2   = &nbsp *fam13
+<br>    [(2n + 1) * 3 * 5] &nbsp + &nbsp 2 = &nbsp *fam17
+<br>    [(2n + 1) * 3 * 5] &nbsp + &nbsp 4 = &nbsp *fam19
+<br>    [(2n + 1) * 3 * 5] &nbsp + &nbsp 8 = &nbsp *fam23
+<br>    [(2n + 1) * 3 * 5] &nbsp + 14 = &nbsp *fam29
+<br>    where n = 0 &nbsp,&nbsp 1 &nbsp,&nbsp 2 &nbsp,&nbsp 3 &nbsp,&nbsp . &nbsp . &nbsp . &nbsp,&nbsp K &nbsp,&nbsp K &nbsp + &nbsp 1
+<br>    also valid for negative n.
+<br>  and if try = [int(PS / 7) + 1] finds no factors , then prime.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 </div><!-- /.blurb -->
